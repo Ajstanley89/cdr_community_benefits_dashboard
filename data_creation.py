@@ -29,7 +29,7 @@ stockton_lat_lon_center = (37.961632, -121.275604)
 
 # grid params
 step_size_meters = 200
-num_cells = 10
+num_cells = 5
 
 pollution_n_days = 365
 
@@ -79,8 +79,8 @@ def make_grid(center_lon: float, center_lat: float, step_size: int, num_cells: i
 
     return gdf, grid_gdf, centerpoints_gdf
 
-def simulate_pollution_data(row: pd.Series, data_size: int):
-    """Returns 3 seperate numpy arrays (representing time series) for 3 different simualted pollution amounts
+def simulate_pollution_data(row: pd.Series, data_size: int, add_trend: bool=True):
+    """Returns 3 seperate numpy arrays (representing time series) for 3 different simulated pollution amounts
     
     pollutant distribution limits estimated from fig 7 and fig 3 from this paper: https://www.sciencedirect.com/science/article/pii/S1352231022000012
 
@@ -94,6 +94,13 @@ def simulate_pollution_data(row: pd.Series, data_size: int):
     row['PM_2.5'] = np.random.triangular(2.0, pm25_mode, pm25_mode + 20, data_size)
     row['Black_carbon']= np.random.triangular(0.1, bc_mode, bc_mode + 1, data_size)
     row['Ultrafine_particulate'] = np.random.triangular(2000, ufp_mode, ufp_mode + 2000, data_size)
+
+    if add_trend:
+        day = row['Date']
+        reference_date = date(2025, 5, 12)
+        diff = reference_date - day
+        num_days = diff.days
+        row['PM_2.5'] = max(row['PM_2.5'] - (np.random.normal(.1, 0.05) * num_days), 0) # can't have negative pm 2.5
 
     return row
 
