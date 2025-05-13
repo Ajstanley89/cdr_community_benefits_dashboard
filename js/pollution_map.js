@@ -339,18 +339,22 @@ function build_resource_time_series(svg, data, resource) {
         .style("font-size", "16px") 
         .text(`${resource} Per Month`);
 
-    let x_domain = d3.extent(data.month)
-    console.log(x_domain)
-    let xScale = d3.scaleTime()
-        .domain(x_domain)
+    let x_domain_res = d3.extent(data.month)
+    console.log(x_domain_res)
+    let xScaleRes = d3.scaleTime()
+        .domain(x_domain_res)
         .range([0, width])
 
 
-    let y_domain = d3.extent(data[resource])
-    console.log('y: ', y_domain)
-    let yScale = d3.scaleLinear()
+    let y_domain_res = d3.extent(data[resource])
+    console.log('y: ', y_domain_res)
+    let yScaleRes = d3.scaleLinear()
         .domain(y_domain)
         .range([height, 0])
+
+    let line = d3.line()
+                    .x((d) => xScaleRes(d.month))
+                    .y((d) => yScaleRes(d[resource]))
 
     svg.append('g')
         .attr("transform", `translate(0, ${height})`)
@@ -360,16 +364,11 @@ function build_resource_time_series(svg, data, resource) {
         .call(d3.axisLeft(yScale))
 
     // draw lines
-    svg.selecteAll('path')
-        .data([data])
-        .enter()
-        .append('path')
-        .attr("fill", "none")
+    svg.append('path')
+        .attr('d', line(data))
+        .attr("fill", "red")
         .attr("stroke", "blue")
         .attr("stroke-width", 6)
-        .attr('d', d3.line()
-            .x(function(d) {return xScale(d.month)})
-            .y(function(d) {return yScale(d[resource])}));
 
     return svg
 }

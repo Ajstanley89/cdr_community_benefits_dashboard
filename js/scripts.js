@@ -5,3 +5,6 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+const collapseElementList = document.querySelectorAll('.collapse')
+const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
