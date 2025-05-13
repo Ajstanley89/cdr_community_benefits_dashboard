@@ -5,7 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Carbon Dioxide Removal for the Masses</title>
+        <title>Environmental Impacts</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.js" integrity="sha512-iiZOijMkLFQSa43AyuzD6p176GJlnhWXEv7loEZFkCDpFQvZCijZLE6U8IRpAIb53KagIIwhSwHWTgsDlci/jw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+        
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -26,18 +35,54 @@
                     </ul>
                 </div>
                 <div class="searchbar">
-                    <input type="text" placeholder="Find some shiiiit...">
+                    <input type="text" id="seachBar" placeholder="Find some shiiiit...">
                 </div>
             </div>
         </nav>
         <!-- Content Row-->
-            <div class="row" height="100%">
-                <div class="col-md-6 mb-5">
+        <div class="row" height = 30%>
+            <div class="col-md-6 mb-5">
+                <!--drop down for pollutant selection-->
+                <div class="select-wrap">
+                    <label for="pollutantSelection">Select a Pollutant</label>
+                    <select name="pollutantSelection" id="pollutantSelection"></select>
+                </div>
+
+                <!--drop down for resource selection-->
+                <div class="select-wrap">
+                    <label for="pollutantSelection">Select Resource</label>
+                    <select name="resourceSelection" id="resourceSelection"></select>
+                </div>
+
+                <!--Slider-->
+                <label for="mapSlider">Moving Average Window</label>
+                <input type="range" name="mapSlider" id="mapSlider" min="1" max="30" step="1" value="15">
+                <span id="sliderValue">15 Days</span>
+            </div>
+        </div>
+        <div class="row" height="100%">
+                <!-- <div class="col-md-6 mb-5">
                     <div clas="embed-responsive">
                         <iframe width='750px' height='500px' src="https://map.purpleair.com/air-quality-standards-us-epa-aqi?opt=%2F1%2Fa%2Flp%2Fa10%2Fp604800%2FcC0#11.64/37.9514/-121.3086"></iframe>
                     </div>
-                </div>
+                </div> -->
+            <div class="col-md-6 mb-5">
+                <!--Leaflet emissions map-->
+                <div id="map"></div>
+                    <!-- <script src="js/pollution_map.js"></script> -->
             </div>
+            <!--Right Side Graphs-->
+            <div class="col-md-6 mb-5">
+                <!--Timeseries For Air Quality-->
+                <div id="timeSeriesPlot">
+                    <!-- <script src="js/pollution_map.js"></script> -->
+                </div>
+                <div id="resourceConsumptionPlot">
+                </div>
+                <script src="js/pollution_map.js"></script>
+            </div>
+        </div>
+        
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; CDR for the People</p></div>

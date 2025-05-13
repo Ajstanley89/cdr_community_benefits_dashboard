@@ -10824,3 +10824,34 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+#map {
+  position: relative;
+  border: 1px solid black;
+  height: 600px;
+  width: 100%;
+}
+
+.select-wrap {
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 2px;
+  width: 45%;
+  background-color:#fff;
+  position:relative;
+}
+.select-wrap label{
+  font-size:8px;
+  text-transform: uppercase;
+  color: #777;
+  padding: 0 4px;  
+  position: absolute;
+  top:1px;
+}
+
+select{
+  background-color: #fff;
+  border:0px;
+  height:35px;
+  font-size: 16px;
+}
