@@ -1,6 +1,6 @@
 // Following th e exmaple here: https://leafletjs.com/examples/quick-start/
-var view_center = [37.961632, -121.275604];
-var map = L.map('map').setView(view_center, 13);
+const view_center = [37.961632, -121.275604];
+const map = L.map('map').setView(view_center, 13);
 
 // add tile layer
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -8,19 +8,19 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var marker = L.marker(view_center).addTo(map);
+const marker = L.marker(view_center).addTo(map);
 
 // display marker info on click
 marker.bindPopup("Proposed DACS facility").openPopup();
 
 // Time series section
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 60},
+const margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 600 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svgPollution = d3.select("#timeSeriesPlot")
+const svgPollution = d3.select("#timeSeriesPlot")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -28,7 +28,7 @@ var svgPollution = d3.select("#timeSeriesPlot")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 // Resource consumption
-var svgResource = d3.select("#resourceConsumptionPlot")
+const svgResource = d3.select("#resourceConsumptionPlot")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -37,9 +37,9 @@ var svgResource = d3.select("#resourceConsumptionPlot")
 
 // load geojson data
 Promise.all([d3.json("data/pollution.json"), d3.json("data/pollution_locations.json"), d3.json("data/resource_consumption.json")]).then(function(data) {
-    pollution_data = data[0]
-    coordinates_data = data[1]
-    resource_data = data[2]
+    const pollution_data = data[0]
+    const coordinates_data = data[1]
+    const resource_data = data[2]
 
     console.log("Load Data")
     console.log(pollution_data)
@@ -47,9 +47,9 @@ Promise.all([d3.json("data/pollution.json"), d3.json("data/pollution_locations.j
     console.log(resource_data)
 
     //get unique pollutants
-    var pollutant_types = new Set;
+    const pollutant_types = new Set;
     //unique measurement locations
-    var location_ids = new Set;
+    const location_ids = new Set;
 
     pollution_data.features.forEach(d => {
         pollutant_types.add(d.properties.Pollutant)
@@ -95,11 +95,11 @@ Promise.all([d3.json("data/pollution.json"), d3.json("data/pollution_locations.j
         .text(d => d)
 
     // build initial graph
-    var initial_pollutant_selection = d3.select('#pollutantSelection').property('value')
-    var window_size = d3.select('#mapSlider').property('value')
-    var filtered_data = filter_by_pollutant(pollution_data, initial_pollutant_selection)
-    var location_timeseries = reformat_timeseries(filtered_data, coordinates_data, location_ids, window_size)
-    var heat_data = format_for_heat_layer(location_timeseries)
+    const initial_pollutant_selection = d3.select('#pollutantSelection').property('value')
+    const window_size = d3.select('#mapSlider').property('value')
+    const filtered_data = filter_by_pollutant(pollution_data, initial_pollutant_selection)
+    const location_timeseries = reformat_timeseries(filtered_data, coordinates_data, location_ids, window_size)
+    const heat_data = format_for_heat_layer(location_timeseries)
 
     var heatLayer = L.heatLayer(heat_data, {radius: 10}).addTo(map);
 
@@ -110,22 +110,22 @@ Promise.all([d3.json("data/pollution.json"), d3.json("data/pollution_locations.j
 
     build_pollution_time_series(svgPollution, location_timeseries, initial_pollutant_selection)
 
-    var resource_selection = d3.select('#resourceSelection').property('value')
+    const resource_selection = d3.select('#resourceSelection').property('value')
     console.log('asdklfjh', resource_data, resource_selection)
     build_resource_time_series(svgResource, resource_data, resource_selection)
 
 
     // event listener for dropdown
     d3.select('#pollutantSelection').on('change', function() {
-        var pollutant = this.value
+        const pollutant = this.value
 
-        var filtered_data = filter_by_pollutant(pollution_data, pollutant)
+        const filtered_data = filter_by_pollutant(pollution_data, pollutant)
 
         // console.log('Pollutant: ', pollutant, filtered_data)
 
-        var window_size = d3.select('#mapSlider').property('value')
+        const window_size = d3.select('#mapSlider').property('value')
 
-        var location_timeseries = reformat_timeseries(filtered_data, coordinates_data, location_ids, window_size)
+        const location_timeseries = reformat_timeseries(filtered_data, coordinates_data, location_ids, window_size)
         //console.log(location_timeseries)
 
         heatLayer = build_heat_layer(location_timeseries, heatLayer)
@@ -137,19 +137,26 @@ Promise.all([d3.json("data/pollution.json"), d3.json("data/pollution_locations.j
 
     // event listener for slider
     d3.select("#mapSlider").on("input", function() {
-        var window_size= this.value
+        const window_size= this.value
         d3.select("#sliderValue").text(window_size + " Days")
 
-        var pollutant = d3.select('#pollutantSelection').property('value')
+        const pollutant = d3.select('#pollutantSelection').property('value')
 
-        var filtered_data = filter_by_pollutant(pollution_data, pollutant)
+        const filtered_data = filter_by_pollutant(pollution_data, pollutant)
 
-        var location_timeseries = reformat_timeseries(filtered_data, coordinates_data, location_ids, window_size)
+        const location_timeseries = reformat_timeseries(filtered_data, coordinates_data, location_ids, window_size)
 
         heatLayer = build_heat_layer(location_timeseries, heatLayer)
 
         build_pollution_time_series(svgPollution, location_timeseries, pollutant)
 
+    })
+
+    // resource consumption event listener
+    d3.select('#resourceSelection').on('change', function() {
+        const resource = this.value
+
+        build_resource_time_series(svgResource, resource_data, resource)
     })
 
 
@@ -177,7 +184,7 @@ function reformat_timeseries(data, coordinates_data, location_ids, window_size) 
     // reformat as an array of dicts for each location, each measurement is in an array in the dict
     // this function must be hella slow. Way too many nested loops. I'm not a computer engineer LOL
     // assumes data is already sorted chronologically.
-    var new_arr = [];
+    let new_arr = [];
     
     location_ids.forEach(function(id) {
         location_dict = {'location_id': id,
@@ -206,7 +213,7 @@ function reformat_timeseries(data, coordinates_data, location_ids, window_size) 
 
 function format_for_heat_layer(data) {
 
-    var formatted_data = data.map(function(d) {
+    let formatted_data = data.map(function(d) {
        return [d.geometry.coordinates[1], d.geometry.coordinates[0], d.moving_average[0]] // only show the latest moving average on the map
     })
     
@@ -214,9 +221,9 @@ function format_for_heat_layer(data) {
 
     // add color scale
     console.log(formatted_data)
-    var pollutant_domain = d3.extent(formatted_data, d => d[2])
+    let pollutant_domain = d3.extent(formatted_data, d => d[2])
     console.log("extent", pollutant_domain)
-    var heatmap_scale = d3.scaleLinear()
+    let heatmap_scale = d3.scaleLinear()
                             .domain(pollutant_domain)
                             .range([0, 100])
 
@@ -228,14 +235,14 @@ function format_for_heat_layer(data) {
 function build_heat_layer(data, old_heat_layer) {
     // leaflet needs data in [[lat, lon, intensity],...]
     map.removeLayer(old_heat_layer)
-    var formatted_data = format_for_heat_layer(data)
-    var max_val = d3.max(formatted_data, d => d[2])
+    let formatted_data = format_for_heat_layer(data)
+    let max_val = d3.max(formatted_data, d => d[2])
 
     console.log(max_val)
 
-    var legend = L.control({ position: 'bottomright' });
+    let legend = L.control({ position: 'bottomright' });
 
-    var new_heat_layer = L.heatLayer(formatted_data, {radius: 10}).addTo(map)
+    let new_heat_layer = L.heatLayer(formatted_data, {radius: 10}).addTo(map)
 
     return new_heat_layer
 }
@@ -250,23 +257,25 @@ function build_pollution_time_series(svg, data, pollutant) {
         .attr("y", 0 + (margin.top / 2))
         .attr("text-anchor", "middle")  
         .style("font-size", "16px") 
-        .text(`${pollutant} Air Concentration Over Time`);
+        .text(`${pollutant} Air Concentration Moving Average`);
 
     var pollution_quantiles = get_MA_quantiles(data)
     console.log('quantiles: ', pollution_quantiles)
 
-    x_domain = d3.extent(pollution_quantiles.map(d => d.date))
+    let x_domain = d3.extent(pollution_quantiles.map(d => d.date))
     // console.log(x_domain)
-    xScale = d3.scaleTime()
+    let xScale = d3.scaleTime()
         .domain(x_domain)
         .range([0, width])
 
 
-    y_domain = [0, d3.max(pollution_quantiles, d => d.q95)]
+    let y_domain = [0, d3.max(pollution_quantiles, d => d.q95)]
     // console.log('y: ', y_domain)
-    yScale = d3.scaleLinear()
+    let yScale = d3.scaleLinear()
         .domain(y_domain)
         .range([height, 0])
+
+    // let line = 
 
     svg.append('g')
         .attr("transform", `translate(0, ${height})`)
@@ -274,6 +283,7 @@ function build_pollution_time_series(svg, data, pollutant) {
 
     svg.append('g')
         .call(d3.axisLeft(yScale))
+
 
     // draw lines
     svg.append('path')
@@ -304,10 +314,10 @@ function build_pollution_time_series(svg, data, pollutant) {
 function get_MA_quantiles(data) {
     console.log('time series function: ', data[0])
 
-    var outer_arr = [];
+    let outer_arr = [];
 
     for (let i=0; i<data[0].moving_average.length; i++) {
-        var inner_arr = [];
+        let inner_arr = [];
 
         data.forEach(d => {inner_arr.push(d.moving_average[i])})
 
@@ -331,6 +341,12 @@ function build_resource_time_series(svg, data, resource) {
     // clear graph
     svg.selectAll('*').remove()
 
+    let new_data = data.month.map(function(month, i) {
+        return {'month': month, 'value': data[resource][i]}
+    })
+
+    console.log(new_data)
+
     // title
     svg.append("text")
         .attr("x", (width / 2))             
@@ -339,22 +355,23 @@ function build_resource_time_series(svg, data, resource) {
         .style("font-size", "16px") 
         .text(`${resource} Per Month`);
 
-    let x_domain_res = d3.extent(data.month)
-    console.log(x_domain_res)
-    let xScaleRes = d3.scaleTime()
-        .domain(x_domain_res)
+    // scales
+    let x_domain = d3.extent(new_data, d => d.month)
+    console.log(x_domain)
+    let xScale = d3.scaleTime()
+        .domain(x_domain)
         .range([0, width])
 
 
-    let y_domain_res = d3.extent(data[resource])
-    console.log('y: ', y_domain_res)
-    let yScaleRes = d3.scaleLinear()
+    let y_domain = d3.extent(new_data, d => d.value)
+    console.log('y: ', y_domain)
+    let yScale = d3.scaleLinear()
         .domain(y_domain)
         .range([height, 0])
 
     let line = d3.line()
-                    .x((d) => xScaleRes(d.month))
-                    .y((d) => yScaleRes(d[resource]))
+                    .x((d) => xScale(d.month))
+                    .y((d) => yScale(d.value))
 
     svg.append('g')
         .attr("transform", `translate(0, ${height})`)
@@ -365,10 +382,10 @@ function build_resource_time_series(svg, data, resource) {
 
     // draw lines
     svg.append('path')
-        .attr('d', line(data))
-        .attr("fill", "red")
-        .attr("stroke", "blue")
-        .attr("stroke-width", 6)
+        .attr('d', line(new_data))
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("stroke-width", 2.5)
 
     return svg
 }
