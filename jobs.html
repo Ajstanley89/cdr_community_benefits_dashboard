@@ -20,10 +20,14 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="environemntal_impacts.html">Environmental Impacts</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="jobs.html">Jobs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="timeline.html">Timeline</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#FAQ.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="searchbar">
@@ -36,17 +40,98 @@
             <!-- Heading Row-->
             <div class="row gx-4 gx-lg-5 align-items-center my-5">
                 <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="images/dacs_pic.png" alt="Probably and AI generated image of direct air capture facility. Maybe AI will someday remove more carbon than it uses..." /></div>
-                <div class="col-lg-5">
-                    <h1 class="font-weight-light">CO<sub>2</sub> Ass-kickers Inc</h1>
-                    <p>We're here to take CO<sub>2</sub> and store it where the sun don't shine!</p>
-                    <a class="btn btn-primary" href="#!">Call to Action!</a>
-                </div>
+                    <div class="col-lg-5">
+                        <h1 class="font-weight-light">CO<sub>2</sub> Ass-kickers Inc</h1>
+                        <p>We're here to take CO<sub>2</sub> and store it where the sun don't shine!</p>
+                        <a class="btn btn-primary" href="#!">Call to Action!</a>
+                    </div>
             </div>
             <!-- Call to Action-->
             <div class="card text-white bg-secondary my-5 py-4 text-center">
-                <div class="card-body"><p class="text-white m-0">Jobs Info Coming Soon!</p></div>
+                <div class="card-body"><p class="text-white m-0">Click on a tab to see jobs data</p></div>
             </div>
             <!-- Content Row-->
+            <div class="row gx-4 gx-lg-5">
+                <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Lifecycle Overview Jobs')">Lifecycle Overview Jobs</button>
+                    <button class="tablinks" onclick="openTab(event, 'Job Types')">Job Types</button>
+                    <button class="tablinks" onclick="openTab(event, 'Job Timeline')">Job Timeline</button>
+                    <button class="tablinks" onclick="openTab(event, 'Job Phase and Types')">Job Phase and Types</button>
+                    <button class="tablinks" onclick="openTab(event, 'Decomissioning Jobs')">Decomissioning Jobs</button>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 tabcontent" id='Lifecycle Overview Jobs'>
+                <div class="col-md-3 mb-5 align-self-center">
+                    <p>During the different stages of the project, we project that 765 jobs will be created during construction, 220 jobs will be needed during the operation of the DAC facility, and 100 will be needed during deconstruction. This is a conservative estimate. </p>
+                </div>
+                <div class="col-md-9 mb-5">
+                    <img src="images/lifecycle_jobs.png" width="100%">
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 tabcontent" id='Job Types'>
+                <div class="col-md-3 mb-5 align-self-center">
+                    <p>When considering types of jobs for this DACS facility, a maximum of 800 jobs may be needed in manufacturing, 1200 jobs may be needed in construction, 380 jobs may be needed in operations, 180 may be needed as support, and 400 jobs may be seen in engineering. </p>
+                </div>
+                <div class="col-md-9 mb-5">
+                    <img src="images/job_types.png" width="100%">
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 tabcontent" id='Job Timeline'>
+                <div class="col-md-3 mb-5 align-self-center">
+                    <p>Over 10 years of the project, it can be noted that full operation will not start until after 5 years with 400 jobs present. During construction, from years 1-5 there will be a max of 1200 jobs with a decline to 0 jobs by year 6. </p>
+                </div>
+                <div class="col-md-9 mb-5">
+                    <img src="images/job_timeseries.png" width="100%">
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 tabcontent" id='Job Phase and Types'>
+                <div class="col-md-3 mb-5 align-self-center">
+                    <p>The types of jobs needed during the phases of the project are shown above. Notably the biggest differences between construction and operation are the changes in needed construction and manufacturing jobs.  </p>
+                </div>
+                <div class="col-md-9 mb-5">
+                    <img src="images/job_phase.png" width="100%">
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 tabcontent" id='Decomissioning Jobs'>
+                <div class="col-md-3 mb-5 align-self-center">
+                    <p>During decommissioning, the jobs will decrease by 50 every year for 3 years with the most jobs needed within the first year of the facility’s decommission. </p>
+                </div>
+                <div class="col-md-9 mb-5">
+                    <img src="images/job_decomissioning.png" width="100%">
+                </div>
+            </div>
+
+            <script>
+                function openTab(evt, tabName) {
+                    var i, tabcontent, tablinks;
+
+                    tabcontent = document.getElementsByClassName("tabcontent");
+
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+
+                    tablinks = document.getElementsByClassName("tablinks");
+
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+
+                    const tab = document.getElementById(tabName);
+
+                    console.log(tab)
+
+                    if (tab.classList.contains('row')) {
+                        tab.style.display = "flex";
+                    } 
+                    else {
+                        tab.style.display = "block";
+                    }
+                    evt.currentTarget.className += " active";
+                }
+            </script>
+            </div>
            
         <!-- Footer-->
         <footer class="py-5 bg-dark">
