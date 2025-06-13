@@ -130,6 +130,10 @@
                     }
                     evt.currentTarget.className += " active";
                 }
+
+                // Load first job 
+                document.body.addEventListener('DOMContentLoaded', openTab(event, 'Lifecycle Overview Jobs'));
+
             </script>
             </div>
            
