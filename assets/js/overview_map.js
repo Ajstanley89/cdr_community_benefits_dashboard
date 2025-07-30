@@ -9,11 +9,25 @@ var faciliityMarker = L.marker(facilityPoint).bindPopup('Hypothetical DACS Facil
 var facilityGroup = L.layerGroup([faciliityMarker])
 
 var ccsPoint = [37.79906, -121.60090];
-var ccsMarker = L.marker(ccsPoint).bindPopup("Hypothetical Natural Gas Power Plant that gets CCS added to it to provide C-free power to DAC facility. Storage of the captured CO2 would tie in the DAC storage");
+var ccsMarker = L.circleMarker(ccsPoint, {
+    radius: 8,
+    fillColor: "#A9A9A9",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+}).bindPopup("Hypothetical Natural Gas Power Plant that gets CCS added to it to provide C-free power to DAC facility. Storage of the captured CO2 would tie in the DAC storage");
 var ccsGroup = L.layerGroup([ccsMarker]);
 
 var windPoint = [37.82738, -121.67811];
-var windMarker = L.marker(windPoint).bindPopup("Hypothetical wind farm for DACS plant : 200 acres");
+var windMarker = L.circleMarker(windPoint, {
+    radius: 8,
+    fillColor: "#FF10F0",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+}).bindPopup("Hypothetical wind farm for DACS plant : 200 acres");
 var windGroup = L.layerGroup([windMarker]);
 
 var solarFarms = [
@@ -25,9 +39,18 @@ var solarFarms = [
     {coord: [37.8641, -121.64269], text: "40 Acres Solar Developed by DACS Company"}
 ];
 
+var solarCircles = solarFarms.map(d => L.circleMarker(d.coord, {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+}).bindPopup(d.text));
+
 var solarMarkers = solarFarms.map(item => L.marker(item.coord).bindPopup(item.text))
 
-var solarGroup = L.layerGroup(solarMarkers)
+var solarGroup = L.layerGroup(solarCircles)
 
 var injectionPoint = [37.63599, -121.29550];
 var injectionMarker = L.marker(injectionPoint).bindPopup('Hypothetical CO2 injection location')
@@ -57,7 +80,7 @@ var overlayMaps = {
     "Injection Point": injectionGroup
 };
 
-var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+var layerControl = L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map);
 
 // line from facility to injection site to simualte pipeline
 var pipeline = L.polyline([facilityPoint, injectionPoint], {
