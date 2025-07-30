@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Environmental Impacts</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.js" integrity="sha512-iiZOijMkLFQSa43AyuzD6p176GJlnhWXEv7loEZFkCDpFQvZCijZLE6U8IRpAIb53KagIIwhSwHWTgsDlci/jw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+        
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">Environmental Impacts</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="environemntal_impacts.html">Environmental Impacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="timeline.html">Timeline</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="searchbar">
+                    <input type="text" id="seachBar" placeholder="Search Be Taking L's frfr">
+                </div>
+            </div>
+        </nav>
+        <div class="container px-4 px-lg-5">
+            <!--Explainer Row-->
+            <div class="row" height = 30%>
+                <div class="col-md-6 mb-5">
+                    <H4>Air Quality</H4>
+                    <p>We want to ensure that pollution caused from connstruction and operation of our facilty does not put undue risk on the community. 
+                    To start, we prioritize decarbonized construction processes to construct our facility. In addition, we are setting up a network of air monitors around the facility.
+                    You can explore the current monitors on the interactive map, and we welcome further discussion on air quality and sensor placement from anyone in the community.
+                </p>
+                </div>
+                <div class="col-md-6 mb-5">
+                    <H4>Resource Usage</H4>
+                    <p>It's difficult to remove carbon dioxide from the air, so Direct Air capture can use lots of energy and water. The process needs energy to power large industrial fans, and it needs water to regenerate solvents. These energy inputs enable continuous operation of the facility.<br>
+                        <br>
+                    Click <a href="https://impakter.com/direct-air-capture-resource-considerations-and-costs-for-carbon-removal/">here</a> for more information on how DACS uses resources, and explore the charts below to track this facility's resource usage.
+                </p>
+                </div>
+            </div>
+
+            <!-- Content Row-->
+            <div class="row" height = 50%>
+                <div class="col-md-6 mb-5">
+                    <!--drop down for pollutant selection-->
+                    <div class="select-wrap">
+                        <label for="pollutantSelection">Select a Pollutant</label>
+                        <select name="pollutantSelection" id="pollutantSelection"></select>
+                    </div>
+
+                    <!--drop down for resource selection-->
+                    <div class="select-wrap">
+                        <label for="resourceSelection">Select Resource</label>
+                        <select name="resourceSelection" id="resourceSelection"></select>
+                    </div>
+
+                    <!--Slider-->
+                    <label for="mapSlider">Moving Average Window</label>
+                    <input type="range" name="mapSlider" id="mapSlider" min="1" max="30" step="1" value="15">
+                    <span id="sliderValue">15 Days</span>
+                </div>
+            </div>
+            <div class="row" height="100%">
+                    <!-- <div class="col-md-6 mb-5">
+                        <div clas="embed-responsive">
+                            <iframe width='750px' height='500px' src="https://map.purpleair.com/air-quality-standards-us-epa-aqi?opt=%2F1%2Fa%2Flp%2Fa10%2Fp604800%2FcC0#11.64/37.9514/-121.3086"></iframe>
+                        </div>
+                    </div> -->
+                <div class="col-md-6 mb-5">
+                    <!--Leaflet emissions map-->
+                    <div id="map"></div>
+                        <!-- <script src="js/pollution_map.js"></script> -->
+                </div>
+                <!--Right Side Graphs-->
+                <div class="col-md-6 mb-5">
+                    <!--Timeseries For Air Quality-->
+                    <div id="timeSeriesPlot">
+                        <!-- <script src="js/pollution_map.js"></script> -->
+                    </div>
+                    <div id="resourceConsumptionPlot">
+                    </div>
+                    <script src="js/pollution_map.js"></script>
+                </div>
+            </div>
+            <!--Impacts Table-->
+            <div class="row" height="100%">
+                <div class="col-md-12 mb-5">
+                    <H4>Typical DACS Daily Operating Characteristics</H4>
+                    <table class="table">
+                    <thead>
+                        <tr>
+                        <th>Impact Area</th>
+                        <th>Variable</th>
+                        <th>Normal Operation Range (per day, for 100 tCO₂/day)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Water</td>
+                            <td>Water Use</td>
+                            <td>100–700 m³/day</td>
+                        </tr>
+                        <tr>
+                            <td>Water</td>
+                            <td>Wastewater Generation</td>
+                            <td>50–200 m³/day</td>
+                        </tr>
+                        <tr>
+                            <td>Water</td>
+                            <td>Local Water Availability</td>
+                            <td>Site dependent (qualitative)</td>
+                        </tr>
+                        <tr>
+                            <td>Air Quality</td>
+                            <td>Dust/Particulate Matter</td>
+                            <td>Negligible (&lt;10 mg/m<sup>3</sup>, near-zero emissions)</td>
+                        </tr>
+                        <tr>
+                            <td>Air Quality</td>
+                            <td>Odor</td>
+                            <td>Negligible</td>
+                        </tr>
+                        <tr>
+                            <td>Land</td>
+                            <td>Land Disturbance</td>
+                            <td>No daily change; 0.1–1 ha total for 100 ktCO₂/yr</td>
+                        </tr>
+                        <tr>
+                            <td>Land</td>
+                            <td>Soil Erosion</td>
+                            <td>Minimal with proper management</td>
+                        </tr>
+                        <tr>
+                            <td>Land</td>
+                            <td>Habitat Disruption</td>
+                            <td>Minimal to moderate (site specific)</td>
+                        </tr>
+                        <tr>
+                            <td>Energy</td>
+                            <td>Electricity Demand</td>
+                            <td>100–200 MWh/day</td>
+                        </tr>
+                        <tr>
+                            <td>Energy </td>
+                            <td>Grid Reliability</td>
+                            <td>Site dependent (qualitative)</td>
+                        </tr>
+                        <tr>
+                            <td>Energy</td>
+                            <td>Energy Use</td>
+                            <td>200–600 GJ thermal/day</td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                </div>
+        </div>
+    </div>
+        
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; CDR for the People</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
