@@ -3122,6 +3122,8 @@ input, select, textarea {
 
 	}
 
+	
+
 /* Small */
 
 	@media screen and (max-width: 736px) {
@@ -3229,4 +3231,43 @@ input, select, textarea {
 #map {
   height: 300px;
   width: 100%;
+}
+
+#emissionsMap {
+  height: 300px;
+  width: 100%;
+}
+
+/* Modal backdrop */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;                       /* shorthand for top/right/bottom/left: 0 */
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+/* Show it */
+.modal.active {
+  display: flex;
+}
+
+/* Modal content overrides */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  padding: 1.5em;                /* same as .box */
+}
+
+/* Ensure the closer appears in top-right */
+.poptrox-popup .closer {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.poptrox-popup .closer:hover {
+  opacity: 1.0;
 }

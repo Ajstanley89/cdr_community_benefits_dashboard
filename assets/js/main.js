@@ -114,4 +114,54 @@
 
 			});
 
+	// Cache selectors
+	var $modal     = $('#modal');
+	var $openBtn   = $('#openModal');
+	var $closeBtn  = $('.poptrox-popup .closer');
+	var $okBtn     = $('#okBtn');
+	var $cancelBtn = $('#cancelBtn');
+
+	// Open modal on button click
+	$openBtn.on('click', function(e) {
+		e.preventDefault();
+		$modal.addClass('active');
+	});
+
+	// Close modal on closer (×), OK or Cancel buttons
+	$closeBtn.add($okBtn).add($cancelBtn).on('click', function(e) {
+		e.preventDefault();
+		$modal.removeClass('active');
+	});
+
+	// Close modal when clicking outside the content box
+	$modal.on('click', function(e) {
+		if ($(e.target).is($modal)) {
+		e.preventDefault();
+		$modal.removeClass('active');
+		}
+	});
+
+	// Inside your $(function() { ... });
+  
+	// Open handler for all .js-modal-open buttons
+	$('.js-modal-open').on('click', function(e) {
+	e.preventDefault();
+	var targetSelector = $(this).data('modal-target');
+	$(targetSelector).addClass('active');
+	});
+
+	// Close handler for anything marked [data-modal-close]
+	$('[data-modal-close]').on('click', function(e) {
+	e.preventDefault();
+	$(this).closest('.modal').removeClass('active');
+	});
+
+	// Clicking on the backdrop (outside .modal-content) closes too
+	$('.modal').on('click', function(e) {
+	if (e.target === this) {
+		e.preventDefault();
+		$(this).removeClass('active');
+	}
+	});
+
 })(jQuery);

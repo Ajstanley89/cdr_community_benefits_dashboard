@@ -1,42 +1,42 @@
-// Following th e exmaple here: https://leafletjs.com/examples/quick-start/
+// Following the exmaple here: https://leafletjs.com/examples/quick-start/
 const view_center = [37.961632, -121.275604];
-const map = L.map('map').setView(view_center, 13);
+const emissionsMap = L.map('emissionsMap').setView(view_center, 13);
 
 // add tile layer
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 15,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+}).addTo(emissionsMap);
 
-const marker = L.marker(view_center).addTo(map);
+const marker = L.marker(view_center).addTo(emissionsMap);
 
 // display marker info on click
 marker.bindPopup("Proposed DACS facility").openPopup();
 
 // Time series section
 // set the dimensions and margins of the graph
-const margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 600 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+var pollution_margin = {top: 10, right: 30, bottom: 30, left: 60},
+width = 300 - pollution_margin.left - pollution_margin.right,
+height = 150 - pollution_margin.top - pollution_margin.bottom;
 
 // append the svg object to the body of the page
-const svgPollution = d3.select("#timeSeriesPlot")
+var svgPollution = d3.select("#timeSeriesPlot")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + pollution_margin.left + pollution_margin.right)
+    .attr("height", height + pollution_margin.top + pollution_margin.bottom)
     .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
+    .attr("transform", `translate(${pollution_margin.left},${pollution_margin.top})`);
 
 // Resource consumption
-const svgResource = d3.select("#resourceConsumptionPlot")
+var svgResource = d3.select("#resourceConsumptionPlot")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + pollution_margin.left + pollution_margin.right)
+    .attr("height", height + pollution_margin.top + pollution_margin.bottom)
     .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
+    .attr("transform", `translate(${pollution_margin.left},${pollution_margin.top})`);
 
 // load geojson data
-Promise.all([d3.json("data/pollution.json"), d3.json("data/pollution_locations.json"), d3.json("data/resource_consumption.json")]).then(function(data) {
+Promise.all([d3.json("assets/data/pollution.json"), d3.json("assets/data/pollution_locations.json"), d3.json("assets/data/resource_consumption.json")]).then(function(data) {
     const pollution_data = data[0]
     const coordinates_data = data[1]
     const resource_data = data[2]
@@ -101,7 +101,7 @@ Promise.all([d3.json("data/pollution.json"), d3.json("data/pollution_locations.j
     const location_timeseries = reformat_timeseries(filtered_data, coordinates_data, location_ids, window_size)
     const heat_data = format_for_heat_layer(location_timeseries)
 
-    var heatLayer = L.heatLayer(heat_data, {radius: 10}).addTo(map);
+    var heatLayer = L.heatLayer(heat_data, {radius: 10}).addTo(emissionsMap);
 
     heatLayer.on('mouseover', ev => {
         console.log('You touched the heatmap!')
@@ -234,7 +234,7 @@ function format_for_heat_layer(data) {
 
 function build_heat_layer(data, old_heat_layer) {
     // leaflet needs data in [[lat, lon, intensity],...]
-    map.removeLayer(old_heat_layer)
+    emissionsMap.removeLayer(old_heat_layer)
     let formatted_data = format_for_heat_layer(data)
     let max_val = d3.max(formatted_data, d => d[2])
 
@@ -242,7 +242,7 @@ function build_heat_layer(data, old_heat_layer) {
 
     let legend = L.control({ position: 'bottomright' });
 
-    let new_heat_layer = L.heatLayer(formatted_data, {radius: 10}).addTo(map)
+    let new_heat_layer = L.heatLayer(formatted_data, {radius: 10}).addTo(emissionsMap)
 
     return new_heat_layer
 }
@@ -254,7 +254,7 @@ function build_pollution_time_series(svg, data, pollutant) {
     // title
     svg.append("text")
         .attr("x", (width / 2))             
-        .attr("y", 0 + (margin.top / 2))
+        .attr("y", 0 + (pollution_margin.top / 2))
         .attr("text-anchor", "middle")  
         .style("font-size", "16px") 
         .text(`${pollutant} Air Concentration Moving Average`);
@@ -350,7 +350,7 @@ function build_resource_time_series(svg, data, resource) {
     // title
     svg.append("text")
         .attr("x", (width / 2))             
-        .attr("y", 0 + (margin.top * 2))
+        .attr("y", 0 + (pollution_margin.top * 2))
         .attr("text-anchor", "middle")  
         .style("font-size", "16px") 
         .text(`${resource} Per Month`);

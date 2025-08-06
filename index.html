@@ -16,6 +16,14 @@
 	  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
+
+		<!-- d3 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.js"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -23,7 +31,7 @@
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>CO2 Ass-kickers Inc</strong>, We remove carbon dioxide directly from the air to fight climate change. Using advanced technology, we’re working to clean up the atmosphere and build a better future.
+					<h1><strong>TBD Company Name</strong>, We remove carbon dioxide directly from the air to fight climate change. Using advanced technology, we’re working to clean up the atmosphere and build a better future.
 				</div>
 			</header>
 
@@ -34,16 +42,22 @@
 						<header class="major">
 							<h2>Site Location Map</h2>
 						</header>
-						<p>This map shows where CO₂ Ass-Kickers Inc.’s Direct Air Capture site will be located, the well injection location (where the CO<sub>2</sub> is stored), and the additional energy sources created to support the facility.</p>
+						<p>This map shows where TBD Company Name's Direct Air Capture site will be located, the well injection location (where the CO<sub>2</sub> is stored), and the additional energy sources created to support the facility.</p>
 
-						<p>Direct Air Capture needs to be powered by low-carbon energy sources for effective carbon capture. Where possible, we will prioritize the usage of wind and solar energy to power the facilty.</p>
+						<p>Direct Air Capture uses a lot of energy. Removing a tonne of CO<sub>2</sub> from the atmosphere requires about 1500 kWh. This is just above the monthly energy consumption of a family of 4 in a 2000 sqft home. 
+							For reliable CO<sub>2</sub> removal, DACS needs to be powered by low-carbon energy sources.
+						</p>
 
-						<p>If there is not sufficient solar or wind energy, we plan to use a gas power plant with carbon capture and storage fittings to power the facility.</p>
+						<p>
+							We have opted into Ava Community Energy’s Renewable 100 program, which sources 100% of its electricity from California wind and solar. By aligning our power needs with fully renewable sources, we ensure that our Direct Air Capture systems are driven by clean energy—maximizing climate benefit and minimizing upstream emissions
+						</p>
+
+						<p>If there is not sufficient solar or wind energy, we have outfitted a nearby gas power plant with carbon capture and storage to power our facility.</p>
 						
 						<p>Explore the map to learn more about the location and energy sources for our proposed facility.</p>
 						<div class="row">
 							<div class="col-12" height="100 %">
-								<div id="map" height="100px" width="10%"></div>
+								<div id="map"></div>
 								<script src="assets/js/overview_map.js"></script>
 							</div>
 						</div>
@@ -67,16 +81,55 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/men_working.jpg" alt="" /></a>
 								<h3>Job Impacts</h3>
-								<p>WThe construction of this facility will create 765 jobs. When the facility is operational, it will create 220 long-term jobs for Stockton. We believe that upfront investment in quality labor will benefit both our project and the community, so we prioritize hiring union jobs. </p>
+								<p>The construction of this facility will create 765 jobs. When the facility is operational, it will create 220 long-term jobs for Stockton. We believe that upfront investment in quality labor will benefit both our project and the community, so we prioritize hiring union jobs. </p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/Permitting Timeline.jpg" alt="" /></a>
 								<h3>Permitting Timeline</h3>
 								<p>The Facility was completed in 2024 and is now operational!</p>
 							</article>
-						<ul class="actions">
-							<li><a href="#" class="button">General Info</a></li>
-						</ul>
+					</section>
+
+					<!-- community workforce commitment -->
+					<section id="two">
+						<h2>Community Workforce Commitment</h2>
+						<div class="row">
+							<div class="col-6 col-12-xsmall work-item">
+								<h3>Job Agreement Statement</h3>
+								
+								<p>
+									At [Company Name], we prioritize the fair and respectful treatment of all workers. To support this, we incorporate Project Labor Agreements, Heavy Industrial Agreements, and Labor Peace Agreements into our operations. These agreements help ensure fair wages, safe working conditions, and stable labor relations across our projects. 
+									<br><br>
+									Looking to get involved with local unions or skilled trades? Check out this <a href="https://www.sjbuildingtrades.org/">link</a> for information on nearby unions, training programs, and job opportunities.
+									<br>
+								</p>
+								<br>
+								<!-- Triggers -->
+								<button class="button primary js-modal-open" data-modal-target="#jobs">
+								Jobs Data
+								</button>
+
+							</div>
+							<div class="col-6 col-12-xsmall work-item">
+								<h3 style="text-align:center;">Job Distribution by Trade</h3>
+								<img src="images/jobs_pie.png", width="90%", height="90%">
+							</div>
+						</div>
+						<div id="jobs" class="modal">
+							<div class="modal-content poptrox-popup">
+								<span class="closer" data-modal-close></span>
+								<h2>Jobs Data</h2>
+								What should go here?
+								<ul>
+									<li>Statement on equitable hiring?</li>
+									<li>Links?</li>
+									<li>Seize the Means of Production?</li>
+								</ul>
+								<ul class="actions">
+								<li><button class="button primary" data-modal-close>Close</button></li>
+								</ul>
+							</div>
+						</div>
 					</section>
 
 					<!-- Environmental Risk -->
@@ -84,31 +137,88 @@
 						<h2>Environmental Risk</h2>
 						<div class="row">
 							<div class="col-6 col-12-xsmall work-item">
-								<h3>Our Plan to monitor air quality</h3>
-								We're ensuring that construction of this facility:
-								
-								<ul>
-									<li>Doesn't Cause Additional Pollution Burden to the Community</li>
-									<li>Doesn't create significant CO<sub>2</sub> Emissions</li>
-								</ul>
-								
-								To do this, we're commited to a fully decarbonized trucking fleet to ship all construction materials. We've also established a network of air quality sensors to monitor any changes in air quality around the facility.
+								<h3>Philanthropy in Action: Donating Air Quality Monitors</h3>
+								<p>
+									As part of our commitment to advancing climate solutions, [Company Name] donates air quality monitors to communities near our project sites. These monitors provide valuable environmental data that supports both our Direct Air Capture operations and broader efforts to improve local air quality.
+									<br><br>
+									By providing these monitors, we aim to foster transparency, engage the public, and contribute to cleaner, healthier air for everyone. It's one way we ensure our work benefits the environment and the communities we serve.
+									<br>
+								</p>
+								<br>
+								<!-- Triggers -->
+								<button class="button primary js-modal-open" data-modal-target="#environmentaldashboard">
+								Environmental Data
+								</button>
+
 							</div>
 							<div class="col-6 col-12-xsmall work-item">
 								<h3 style="text-align:center;">Air Quality Around the Faclity</h3>
 								<img src="images/gauge-chart-example.svg", width="100%", height="100%">
 								<h3 style="text-align:center;">Low Risk</h3>
 							</div>
+						</div>
 
+					<!-- Environemntal Risk Modal -->
+					<div id="environmentaldashboard" class="modal">
+					<div class="modal-content poptrox-popup">
+						<span class="closer" data-modal-close></span>
+						<!-- dropdown menus -->
+						<div class="row" height = 50%>
+							<div class="col-md-6 mb-5">
+								<!--drop down for pollutant selection-->
+								<div class="select-wrap">
+									<label for="pollutantSelection">Select a Pollutant</label>
+									<select name="pollutantSelection" id="pollutantSelection"></select>
+								</div>
+
+								<!--drop down for resource selection-->
+								<div class="select-wrap">
+									<label for="resourceSelection">Select Resource</label>
+									<select name="resourceSelection" id="resourceSelection"></select>
+								</div>
+
+								<!--Slider-->
+								<label for="mapSlider">Moving Average Window</label>
+								<input type="range" name="mapSlider" id="mapSlider" min="1" max="30" step="1" value="15">
+								<span id="sliderValue">15 Days</span>
+							</div>
+						</div>
+						<div class="row" height="100%">
+							<div class="col-6 col-12-xsmall">
+								<!--Leaflet emissions map-->
+								<!-- TO DO: update emissions map with new facility location -->
+								<div id="emissionsMap"></div>
+							<!--Right Side Graphs-->
+							<div class="col-6 col-12-xsmall">
+								<!--Timeseries For Air Quality-->
+								<div id="timeSeriesPlot"></div>
+								<!-- resource cosumption by month -->
+								<div id="resourceConsumptionPlot"></div>
+                    			<!-- <script src="js/pollution_map.js"></script> -->
+                			</div>
+            				</div>
+						</div>
+						<ul class="actions">
+						<li><button class="button primary" data-modal-close>Close</button></li>
+						</ul>
+					</div>
+					</div>
 					</section>
 
 					<!-- Seismic Risk -->
-					<section id="two">
+					<section id="three">
 						<h2>Earthquake Risk</h2>
 						<div class="row">
 							<div class="col-6 col-12-xsmall work-item">
-								<h3>Our Plan Monitor to Sesimic</h3>
-								Lawrence Livermore National has developed an advanced tool to predict earthquake occurance. The overall riskk of an earthquake is displayed on the right. For more detailed information, you can download the <a href="https://edx.netl.doe.gov/dataset/orion-operational-forecasting-of-induced-seismicity">ORION</a> tool.
+								<h3>Our Plan Monitor to Sesimic Risk</h3>
+								<p>
+									Lawrence Livermore National has developed an advanced tool to predict earthquake occurance. The overall riskk of an earthquake is displayed on the right. For more detailed information, you can download the <a href="https://edx.netl.doe.gov/dataset/orion-operational-forecasting-of-induced-seismicity">ORION</a> tool.
+									<br>
+								</p>
+							<br>
+							<button class="button secondary js-modal-open" data-modal-target="#seismicdashboard">
+							Seismic Data
+							</button>
 							</div>
 							<div class="col-6 col-12-xsmall work-item">
 								<h3 style="text-align:center;">Seismic Risk from Injection</h3>
@@ -118,7 +228,23 @@
 							</div>
 					</section>
 
-				<!-- Three -->
+					<!-- Seismic Modal -->
+					<div id="seismicdashboard" class="modal">
+					<div class="modal-content poptrox-popup">
+						<span class="closer" data-modal-close></span>
+						<h2>Seismic Risk</h2>
+						Things to add:
+						<ul>
+							<li>Well pressure monitoring?</li>
+							<li>Map of fault activity like ORION?</li>
+						</ul>
+						<ul class="actions">
+						<li><button class="button primary" data-modal-close>Close</button></li>
+						</ul>
+					</div>
+					</div>
+
+				<!-- Contact Us -->
 					<section id="three">
 						<h2>Get In Touch</h2>
 						<p>At CO₂ Ass-Kickers Inc., we believe that meaningful climate action starts with strong community connections. Whether you're a local stakeholder, a potential partner, or simply interested in learning more, we welcome your questions and ideas. Reach out to explore how we can collaborate and create lasting impact together.</p>
@@ -491,12 +617,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/pollution_map.js"></script>
+		<script src="assets/js/resource_consumption.js"></script>
 	</body>
 </html>

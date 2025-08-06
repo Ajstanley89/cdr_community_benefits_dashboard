@@ -13,7 +13,7 @@ var svgResource = d3.select("#resourceConsumptionPlot")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 // load geojson data
-Promise.all([d3.json("data/resource_consumption.json")]).then(function(data) {
+Promise.all([d3.json("assets/data/resource_consumption.json")]).then(function(data) {
     resource_data = data[0]
 
     console.log("Load Data")
@@ -38,6 +38,7 @@ Promise.all([d3.json("data/resource_consumption.json")]).then(function(data) {
 
     // the list of all dates in the moving average repeats for each entry. This is not efficient, so we can change that later
     var parseMonth = d3.timeParse("%M")
+    console.log('Month', parseMonth)
     data.month= data.month.map(function(d) { return parseMonth(d)})
 
     // event listener for dropdown
