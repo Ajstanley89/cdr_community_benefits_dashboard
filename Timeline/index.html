@@ -1,0 +1,176 @@
+<!--
+  High-Contrast Muted Timeline with Accent & Reduced White
+  • Sidebar (header) from index.html fileciteturn1file17
+  • Navbar top-fixed enhancement
+  • Core styles from main.css fileciteturn1file2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Permitting Timeline</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Core site CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    :root {
+      --accent-color: #3aafa9;           /* Muted teal accent */
+      --timeline-line: #999;
+      --marker-border: var(--accent-color);
+      --marker-bg: #e9ebed;             /* marker matches page */
+      --item-bg-odd: #c1e2e1;            /* deeper teal tint */
+      --item-bg-even: #d5d5d5;           /* medium gray tint */
+      --page-bg: #e9ebed;                /* light gray-blue background */
+      --hover-shadow: rgba(0, 0, 0, 0.1);
+    }
+    /* Fixed top navbar with subtle border */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+      z-index: 100000;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--page-bg);
+      color: #333;
+      margin: 0;
+    }
+    /* Sidebar offset for main content */
+    #main {
+      margin-left: 35%;
+      padding: 8em 4em 4em;
+      width: calc(100% - 35%);
+    }
+    /* Timeline container */
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 2rem 0;
+      width: 100%; max-width: 800px;
+    }
+    /* Vertical line */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%; top: 0; bottom: 0;
+      width: 4px;
+      background: var(--timeline-line);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    /* Timeline items */
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 1rem 2rem;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .timeline-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--hover-shadow);
+      z-index: 2;
+    }
+    .timeline-item:nth-child(odd) { left: 0; text-align: right; }
+    .timeline-item:nth-child(even) { left: 50%; text-align: left; }
+    /* Marker circle */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--marker-bg);
+      border: 3px solid var(--marker-border);
+      z-index: 1;
+    }
+    .timeline-item:nth-child(odd)::before { right: -10px; }
+    .timeline-item:nth-child(even)::before { left: -10px; }
+    /* Content boxes */
+    .timeline-item .content {
+      padding: 1rem;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+      border-left: 4px solid var(--accent-color);
+    }
+    .timeline-item:nth-child(odd) .content { background: var(--item-bg-odd); color: #1b2a2a; }
+    .timeline-item:nth-child(even) .content { background: var(--item-bg-even); color: #2a2a2a; }
+    .timeline-item .content h2 {
+      font-size: 1.25rem; font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+    .timeline-item .content p {
+      margin: 0; font-size: 0.95rem; line-height: 1.4;
+      color: #333;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      #main { margin-left: 0; padding: 6em 1.5em; width: 100%; }
+      .navbar { position: relative; }
+      .timeline::before { left: 20px; }
+      .timeline-item { width: 100%; padding-left: 3rem; padding-right: 1rem; left: 0; text-align: left; }
+      .timeline-item::before { left: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top-fixed Navbar -->
+  <div class="navbar">
+    <nav>
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../Facility Monitoring/">Environmental Impacts</a></li>
+        <li><a href="../Jobs/">Jobs</a></li>
+        <li><a class="active" href="#">Timeline</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Left Sidebar (Header) -->
+  <header id="header">
+    <div class="inner">
+      <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Avatar" /></a>
+      <h1><strong>Community First DAC</strong>, We remove carbon dioxide directly from the air to fight climate change.<br>Building a better future together.</h1>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <div id="main">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="content"><h2>May 2024</h2><p>Receive all permits, notice to proceed</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="content"><h2>Mar–Apr 2024</h2><p>Building, electrical, and safety permits</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="content"><h2>Dec 2023–Feb 2024</h2><p>EPA review (if needed), Clean Air Act compliance</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="content"><h2>Aug–Nov 2023</h2><p>Air, water, and waste permits (e.g., CARB, RWQCB)</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="content"><h2>Jun–Jul 2023</h2><p>Planning commission & city council hearings</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="content"><h2>Apr–May 2023</h2><p>Address feedback, revise application</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="content"><h2>May 2022–Jan 2023</h2><p>CEQA review, environmental impact assessment (EIR)</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="content"><h2>Apr 2022</h2><p>Submit project proposal to city/county planning dept.</p></div>
+      </div>
+      <div class="timeline-item">
+        <div class="content"><h2>Jan–Mar 2022</h2><p>Site selection, community outreach, feasibility study</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

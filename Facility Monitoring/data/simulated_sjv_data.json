@@ -1,0 +1,1442 @@
+[
+  {
+    "date": "2022-01-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.99,
+    "Black Carbon Concentration": 0.97,
+    "NOx": 31.94,
+    "SOx": 13.05,
+    "air quality index": 34
+  },
+  {
+    "date": "2022-01-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 14.53,
+    "Black Carbon Concentration": 1.45,
+    "NOx": 44.74,
+    "SOx": 13.53,
+    "air quality index": 46
+  },
+  {
+    "date": "2022-01-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 19.06,
+    "Black Carbon Concentration": 2.11,
+    "NOx": 48.61,
+    "SOx": 14.07,
+    "air quality index": 57
+  },
+  {
+    "date": "2022-01-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 18.48,
+    "Black Carbon Concentration": 1.62,
+    "NOx": 39.83,
+    "SOx": 16.88,
+    "air quality index": 54
+  },
+  {
+    "date": "2022-02-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 9.97,
+    "Black Carbon Concentration": 1.06,
+    "NOx": 27.28,
+    "SOx": 7.18,
+    "air quality index": 29
+  },
+  {
+    "date": "2022-02-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 17.9,
+    "Black Carbon Concentration": 1.42,
+    "NOx": 40.17,
+    "SOx": 9.12,
+    "air quality index": 45
+  },
+  {
+    "date": "2022-02-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 18.76,
+    "Black Carbon Concentration": 1.87,
+    "NOx": 46.39,
+    "SOx": 15.6,
+    "air quality index": 58
+  },
+  {
+    "date": "2022-02-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 17.84,
+    "Black Carbon Concentration": 2.05,
+    "NOx": 45.27,
+    "SOx": 22.74,
+    "air quality index": 64
+  },
+  {
+    "date": "2022-03-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 11.97,
+    "Black Carbon Concentration": 0.79,
+    "NOx": 32.47,
+    "SOx": 7.56,
+    "air quality index": 28
+  },
+  {
+    "date": "2022-03-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 15.36,
+    "Black Carbon Concentration": 1.05,
+    "NOx": 35.96,
+    "SOx": 12.33,
+    "air quality index": 38
+  },
+  {
+    "date": "2022-03-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 21.18,
+    "Black Carbon Concentration": 1.74,
+    "NOx": 49.36,
+    "SOx": 14.1,
+    "air quality index": 57
+  },
+  {
+    "date": "2022-03-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 14.0,
+    "Black Carbon Concentration": 1.75,
+    "NOx": 41.54,
+    "SOx": 19.07,
+    "air quality index": 47
+  },
+  {
+    "date": "2022-04-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.69,
+    "Black Carbon Concentration": 0.65,
+    "NOx": 30.97,
+    "SOx": 9.23,
+    "air quality index": 29
+  },
+  {
+    "date": "2022-04-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 13.56,
+    "Black Carbon Concentration": 1.53,
+    "NOx": 43.0,
+    "SOx": 13.77,
+    "air quality index": 41
+  },
+  {
+    "date": "2022-04-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.87,
+    "Black Carbon Concentration": 1.49,
+    "NOx": 50.54,
+    "SOx": 16.5,
+    "air quality index": 51
+  },
+  {
+    "date": "2022-04-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 17.04,
+    "Black Carbon Concentration": 1.96,
+    "NOx": 41.68,
+    "SOx": 15.61,
+    "air quality index": 54
+  },
+  {
+    "date": "2022-05-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 13.63,
+    "Black Carbon Concentration": 1.27,
+    "NOx": 29.78,
+    "SOx": 12.01,
+    "air quality index": 39
+  },
+  {
+    "date": "2022-05-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 15.6,
+    "Black Carbon Concentration": 1.25,
+    "NOx": 40.96,
+    "SOx": 14.96,
+    "air quality index": 43
+  },
+  {
+    "date": "2022-05-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 19.33,
+    "Black Carbon Concentration": 1.71,
+    "NOx": 41.54,
+    "SOx": 16.04,
+    "air quality index": 57
+  },
+  {
+    "date": "2022-05-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 18.17,
+    "Black Carbon Concentration": 1.94,
+    "NOx": 45.28,
+    "SOx": 14.02,
+    "air quality index": 55
+  },
+  {
+    "date": "2022-06-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 11.56,
+    "Black Carbon Concentration": 1.07,
+    "NOx": 34.43,
+    "SOx": 8.96,
+    "air quality index": 31
+  },
+  {
+    "date": "2022-06-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 13.23,
+    "Black Carbon Concentration": 1.25,
+    "NOx": 42.6,
+    "SOx": 12.51,
+    "air quality index": 36
+  },
+  {
+    "date": "2022-06-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 18.19,
+    "Black Carbon Concentration": 1.35,
+    "NOx": 49.54,
+    "SOx": 16.18,
+    "air quality index": 48
+  },
+  {
+    "date": "2022-06-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 17.64,
+    "Black Carbon Concentration": 2.04,
+    "NOx": 45.9,
+    "SOx": 16.11,
+    "air quality index": 58
+  },
+  {
+    "date": "2022-07-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.59,
+    "Black Carbon Concentration": 1.05,
+    "NOx": 30.02,
+    "SOx": 9.53,
+    "air quality index": 34
+  },
+  {
+    "date": "2022-07-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 11.99,
+    "Black Carbon Concentration": 1.23,
+    "NOx": 38.79,
+    "SOx": 10.21,
+    "air quality index": 33
+  },
+  {
+    "date": "2022-07-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 18.77,
+    "Black Carbon Concentration": 1.18,
+    "NOx": 54.75,
+    "SOx": 14.44,
+    "air quality index": 49
+  },
+  {
+    "date": "2022-07-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 19.55,
+    "Black Carbon Concentration": 2.09,
+    "NOx": 41.32,
+    "SOx": 18.99,
+    "air quality index": 64
+  },
+  {
+    "date": "2022-08-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.12,
+    "Black Carbon Concentration": 1.49,
+    "NOx": 29.42,
+    "SOx": 10.6,
+    "air quality index": 39
+  },
+  {
+    "date": "2022-08-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 14.72,
+    "Black Carbon Concentration": 1.05,
+    "NOx": 43.22,
+    "SOx": 13.29,
+    "air quality index": 41
+  },
+  {
+    "date": "2022-08-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 20.52,
+    "Black Carbon Concentration": 0.76,
+    "NOx": 53.15,
+    "SOx": 11.14,
+    "air quality index": 42
+  },
+  {
+    "date": "2022-08-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 21.21,
+    "Black Carbon Concentration": 2.64,
+    "NOx": 46.1,
+    "SOx": 18.9,
+    "air quality index": 69
+  },
+  {
+    "date": "2022-09-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.2,
+    "Black Carbon Concentration": 0.9,
+    "NOx": 25.35,
+    "SOx": 10.14,
+    "air quality index": 26
+  },
+  {
+    "date": "2022-09-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 12.63,
+    "Black Carbon Concentration": 1.35,
+    "NOx": 37.0,
+    "SOx": 14.86,
+    "air quality index": 41
+  },
+  {
+    "date": "2022-09-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.22,
+    "Black Carbon Concentration": 0.72,
+    "NOx": 51.23,
+    "SOx": 11.32,
+    "air quality index": 39
+  },
+  {
+    "date": "2022-09-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 21.39,
+    "Black Carbon Concentration": 2.56,
+    "NOx": 46.06,
+    "SOx": 21.31,
+    "air quality index": 71
+  },
+  {
+    "date": "2022-10-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.52,
+    "Black Carbon Concentration": 1.16,
+    "NOx": 26.29,
+    "SOx": 7.36,
+    "air quality index": 33
+  },
+  {
+    "date": "2022-10-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 15.77,
+    "Black Carbon Concentration": 1.29,
+    "NOx": 40.48,
+    "SOx": 12.42,
+    "air quality index": 39
+  },
+  {
+    "date": "2022-10-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.27,
+    "Black Carbon Concentration": 0.68,
+    "NOx": 49.51,
+    "SOx": 12.21,
+    "air quality index": 42
+  },
+  {
+    "date": "2022-10-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 24.67,
+    "Black Carbon Concentration": 2.39,
+    "NOx": 47.3,
+    "SOx": 22.25,
+    "air quality index": 74
+  },
+  {
+    "date": "2022-11-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 10.05,
+    "Black Carbon Concentration": 1.16,
+    "NOx": 33.48,
+    "SOx": 8.36,
+    "air quality index": 31
+  },
+  {
+    "date": "2022-11-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 16.62,
+    "Black Carbon Concentration": 1.28,
+    "NOx": 42.16,
+    "SOx": 15.49,
+    "air quality index": 45
+  },
+  {
+    "date": "2022-11-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.99,
+    "Black Carbon Concentration": 0.33,
+    "NOx": 45.81,
+    "SOx": 11.85,
+    "air quality index": 34
+  },
+  {
+    "date": "2022-11-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 21.56,
+    "Black Carbon Concentration": 2.44,
+    "NOx": 53.26,
+    "SOx": 23.37,
+    "air quality index": 72
+  },
+  {
+    "date": "2022-12-01",
+    "phase": "pre-construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.03,
+    "Black Carbon Concentration": 1.29,
+    "NOx": 29.21,
+    "SOx": 15.44,
+    "air quality index": 35
+  },
+  {
+    "date": "2022-12-01",
+    "phase": "pre-construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 15.92,
+    "Black Carbon Concentration": 0.99,
+    "NOx": 36.45,
+    "SOx": 12.63,
+    "air quality index": 37
+  },
+  {
+    "date": "2022-12-01",
+    "phase": "pre-construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.88,
+    "Black Carbon Concentration": 0.47,
+    "NOx": 49.75,
+    "SOx": 13.18,
+    "air quality index": 39
+  },
+  {
+    "date": "2022-12-01",
+    "phase": "pre-construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 20.02,
+    "Black Carbon Concentration": 2.07,
+    "NOx": 51.09,
+    "SOx": 23.43,
+    "air quality index": 66
+  },
+  {
+    "date": "2023-01-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.43,
+    "Black Carbon Concentration": 0.75,
+    "NOx": 30.52,
+    "SOx": 10.77,
+    "air quality index": 32
+  },
+  {
+    "date": "2023-01-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 12.87,
+    "Black Carbon Concentration": 1.17,
+    "NOx": 39.81,
+    "SOx": 9.35,
+    "air quality index": 33
+  },
+  {
+    "date": "2023-01-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 18.89,
+    "Black Carbon Concentration": 0.29,
+    "NOx": 51.42,
+    "SOx": 15.28,
+    "air quality index": 33
+  },
+  {
+    "date": "2023-01-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 19.57,
+    "Black Carbon Concentration": 2.25,
+    "NOx": 55.21,
+    "SOx": 23.36,
+    "air quality index": 66
+  },
+  {
+    "date": "2023-02-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 13.03,
+    "Black Carbon Concentration": 1.77,
+    "NOx": 31.71,
+    "SOx": 12.27,
+    "air quality index": 44
+  },
+  {
+    "date": "2023-02-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 16.51,
+    "Black Carbon Concentration": 1.23,
+    "NOx": 38.66,
+    "SOx": 13.12,
+    "air quality index": 43
+  },
+  {
+    "date": "2023-02-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 16.47,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 46.56,
+    "SOx": 13.18,
+    "air quality index": 25
+  },
+  {
+    "date": "2023-02-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 27.38,
+    "Black Carbon Concentration": 2.1,
+    "NOx": 56.57,
+    "SOx": 19.53,
+    "air quality index": 77
+  },
+  {
+    "date": "2023-03-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 11.06,
+    "Black Carbon Concentration": 1.22,
+    "NOx": 30.19,
+    "SOx": 7.84,
+    "air quality index": 32
+  },
+  {
+    "date": "2023-03-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 13.15,
+    "Black Carbon Concentration": 1.21,
+    "NOx": 37.38,
+    "SOx": 12.01,
+    "air quality index": 34
+  },
+  {
+    "date": "2023-03-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.97,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 54.31,
+    "SOx": 14.15,
+    "air quality index": 29
+  },
+  {
+    "date": "2023-03-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 17.67,
+    "Black Carbon Concentration": 2.41,
+    "NOx": 50.45,
+    "SOx": 23.42,
+    "air quality index": 62
+  },
+  {
+    "date": "2023-04-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 10.41,
+    "Black Carbon Concentration": 0.98,
+    "NOx": 31.51,
+    "SOx": 11.73,
+    "air quality index": 31
+  },
+  {
+    "date": "2023-04-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 12.14,
+    "Black Carbon Concentration": 0.98,
+    "NOx": 38.12,
+    "SOx": 10.24,
+    "air quality index": 30
+  },
+  {
+    "date": "2023-04-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 21.26,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 43.94,
+    "SOx": 14.56,
+    "air quality index": 32
+  },
+  {
+    "date": "2023-04-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 26.57,
+    "Black Carbon Concentration": 2.64,
+    "NOx": 49.1,
+    "SOx": 21.36,
+    "air quality index": 77
+  },
+  {
+    "date": "2023-05-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 14.53,
+    "Black Carbon Concentration": 0.86,
+    "NOx": 31.33,
+    "SOx": 11.55,
+    "air quality index": 33
+  },
+  {
+    "date": "2023-05-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 12.66,
+    "Black Carbon Concentration": 1.0,
+    "NOx": 29.79,
+    "SOx": 9.47,
+    "air quality index": 33
+  },
+  {
+    "date": "2023-05-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.07,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 52.47,
+    "SOx": 9.71,
+    "air quality index": 28
+  },
+  {
+    "date": "2023-05-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 21.45,
+    "Black Carbon Concentration": 2.46,
+    "NOx": 57.98,
+    "SOx": 19.46,
+    "air quality index": 68
+  },
+  {
+    "date": "2023-06-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 14.33,
+    "Black Carbon Concentration": 1.0,
+    "NOx": 27.06,
+    "SOx": 10.92,
+    "air quality index": 34
+  },
+  {
+    "date": "2023-06-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 14.88,
+    "Black Carbon Concentration": 0.86,
+    "NOx": 39.69,
+    "SOx": 10.71,
+    "air quality index": 32
+  },
+  {
+    "date": "2023-06-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.65,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 52.18,
+    "SOx": 9.94,
+    "air quality index": 24
+  },
+  {
+    "date": "2023-06-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 27.02,
+    "Black Carbon Concentration": 2.09,
+    "NOx": 54.06,
+    "SOx": 23.93,
+    "air quality index": 74
+  },
+  {
+    "date": "2023-07-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.56,
+    "Black Carbon Concentration": 0.88,
+    "NOx": 29.38,
+    "SOx": 9.01,
+    "air quality index": 29
+  },
+  {
+    "date": "2023-07-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 13.28,
+    "Black Carbon Concentration": 1.12,
+    "NOx": 40.53,
+    "SOx": 10.07,
+    "air quality index": 35
+  },
+  {
+    "date": "2023-07-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 19.07,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 49.71,
+    "SOx": 13.53,
+    "air quality index": 36
+  },
+  {
+    "date": "2023-07-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 21.1,
+    "Black Carbon Concentration": 2.36,
+    "NOx": 56.75,
+    "SOx": 23.98,
+    "air quality index": 73
+  },
+  {
+    "date": "2023-08-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 11.96,
+    "Black Carbon Concentration": 1.02,
+    "NOx": 33.83,
+    "SOx": 8.82,
+    "air quality index": 31
+  },
+  {
+    "date": "2023-08-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 15.52,
+    "Black Carbon Concentration": 0.88,
+    "NOx": 38.77,
+    "SOx": 13.62,
+    "air quality index": 32
+  },
+  {
+    "date": "2023-08-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 18.77,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 51.03,
+    "SOx": 12.16,
+    "air quality index": 37
+  },
+  {
+    "date": "2023-08-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 24.34,
+    "Black Carbon Concentration": 2.44,
+    "NOx": 55.92,
+    "SOx": 22.71,
+    "air quality index": 75
+  },
+  {
+    "date": "2023-09-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.19,
+    "Black Carbon Concentration": 1.12,
+    "NOx": 27.55,
+    "SOx": 14.18,
+    "air quality index": 34
+  },
+  {
+    "date": "2023-09-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 12.38,
+    "Black Carbon Concentration": 0.65,
+    "NOx": 42.87,
+    "SOx": 12.98,
+    "air quality index": 26
+  },
+  {
+    "date": "2023-09-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 18.21,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 46.92,
+    "SOx": 10.17,
+    "air quality index": 30
+  },
+  {
+    "date": "2023-09-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 23.12,
+    "Black Carbon Concentration": 2.36,
+    "NOx": 57.87,
+    "SOx": 22.68,
+    "air quality index": 73
+  },
+  {
+    "date": "2023-10-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 10.35,
+    "Black Carbon Concentration": 0.94,
+    "NOx": 31.24,
+    "SOx": 8.87,
+    "air quality index": 27
+  },
+  {
+    "date": "2023-10-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 12.72,
+    "Black Carbon Concentration": 0.91,
+    "NOx": 40.1,
+    "SOx": 10.35,
+    "air quality index": 28
+  },
+  {
+    "date": "2023-10-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 15.87,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 42.47,
+    "SOx": 9.0,
+    "air quality index": 25
+  },
+  {
+    "date": "2023-10-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 21.54,
+    "Black Carbon Concentration": 2.45,
+    "NOx": 55.88,
+    "SOx": 25.92,
+    "air quality index": 72
+  },
+  {
+    "date": "2023-11-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 13.72,
+    "Black Carbon Concentration": 0.97,
+    "NOx": 29.94,
+    "SOx": 7.99,
+    "air quality index": 31
+  },
+  {
+    "date": "2023-11-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 14.29,
+    "Black Carbon Concentration": 0.77,
+    "NOx": 40.3,
+    "SOx": 9.68,
+    "air quality index": 30
+  },
+  {
+    "date": "2023-11-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.69,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 46.33,
+    "SOx": 12.46,
+    "air quality index": 29
+  },
+  {
+    "date": "2023-11-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 24.14,
+    "Black Carbon Concentration": 2.4,
+    "NOx": 55.18,
+    "SOx": 22.78,
+    "air quality index": 77
+  },
+  {
+    "date": "2023-12-01",
+    "phase": "facility construction",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.2,
+    "Black Carbon Concentration": 0.85,
+    "NOx": 30.07,
+    "SOx": 11.0,
+    "air quality index": 24
+  },
+  {
+    "date": "2023-12-01",
+    "phase": "facility construction",
+    "location": "little manila",
+    "PM 2.5 Concentration": 17.2,
+    "Black Carbon Concentration": 0.99,
+    "NOx": 45.76,
+    "SOx": 9.77,
+    "air quality index": 39
+  },
+  {
+    "date": "2023-12-01",
+    "phase": "facility construction",
+    "location": "tracy",
+    "PM 2.5 Concentration": 18.25,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 53.07,
+    "SOx": 9.89,
+    "air quality index": 33
+  },
+  {
+    "date": "2023-12-01",
+    "phase": "facility construction",
+    "location": "modesto",
+    "PM 2.5 Concentration": 21.08,
+    "Black Carbon Concentration": 2.36,
+    "NOx": 48.14,
+    "SOx": 21.7,
+    "air quality index": 64
+  },
+  {
+    "date": "2024-01-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 10.48,
+    "Black Carbon Concentration": 1.03,
+    "NOx": 31.03,
+    "SOx": 13.75,
+    "air quality index": 30
+  },
+  {
+    "date": "2024-01-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 16.17,
+    "Black Carbon Concentration": 0.65,
+    "NOx": 36.57,
+    "SOx": 12.25,
+    "air quality index": 29
+  },
+  {
+    "date": "2024-01-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 13.71,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 49.89,
+    "SOx": 10.41,
+    "air quality index": 21
+  },
+  {
+    "date": "2024-01-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 18.9,
+    "Black Carbon Concentration": 2.7,
+    "NOx": 53.32,
+    "SOx": 24.81,
+    "air quality index": 70
+  },
+  {
+    "date": "2024-02-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 8.81,
+    "Black Carbon Concentration": 0.88,
+    "NOx": 30.02,
+    "SOx": 10.09,
+    "air quality index": 23
+  },
+  {
+    "date": "2024-02-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 13.34,
+    "Black Carbon Concentration": 0.86,
+    "NOx": 36.04,
+    "SOx": 10.95,
+    "air quality index": 32
+  },
+  {
+    "date": "2024-02-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 16.44,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 48.33,
+    "SOx": 8.95,
+    "air quality index": 29
+  },
+  {
+    "date": "2024-02-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 18.65,
+    "Black Carbon Concentration": 2.63,
+    "NOx": 53.43,
+    "SOx": 20.22,
+    "air quality index": 72
+  },
+  {
+    "date": "2024-03-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 15.1,
+    "Black Carbon Concentration": 1.02,
+    "NOx": 33.54,
+    "SOx": 10.14,
+    "air quality index": 38
+  },
+  {
+    "date": "2024-03-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 18.33,
+    "Black Carbon Concentration": 1.06,
+    "NOx": 38.46,
+    "SOx": 13.15,
+    "air quality index": 37
+  },
+  {
+    "date": "2024-03-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.34,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 43.16,
+    "SOx": 12.42,
+    "air quality index": 27
+  },
+  {
+    "date": "2024-03-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 24.45,
+    "Black Carbon Concentration": 2.08,
+    "NOx": 50.11,
+    "SOx": 18.25,
+    "air quality index": 70
+  },
+  {
+    "date": "2024-04-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 11.46,
+    "Black Carbon Concentration": 1.14,
+    "NOx": 34.51,
+    "SOx": 10.15,
+    "air quality index": 31
+  },
+  {
+    "date": "2024-04-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 17.44,
+    "Black Carbon Concentration": 0.4,
+    "NOx": 34.07,
+    "SOx": 11.07,
+    "air quality index": 29
+  },
+  {
+    "date": "2024-04-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 16.66,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 39.69,
+    "SOx": 10.72,
+    "air quality index": 26
+  },
+  {
+    "date": "2024-04-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 19.11,
+    "Black Carbon Concentration": 2.51,
+    "NOx": 53.53,
+    "SOx": 19.84,
+    "air quality index": 67
+  },
+  {
+    "date": "2024-05-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 10.97,
+    "Black Carbon Concentration": 0.79,
+    "NOx": 29.81,
+    "SOx": 11.91,
+    "air quality index": 29
+  },
+  {
+    "date": "2024-05-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 12.18,
+    "Black Carbon Concentration": 0.75,
+    "NOx": 37.56,
+    "SOx": 9.56,
+    "air quality index": 26
+  },
+  {
+    "date": "2024-05-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 15.53,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 44.08,
+    "SOx": 8.35,
+    "air quality index": 24
+  },
+  {
+    "date": "2024-05-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 25.65,
+    "Black Carbon Concentration": 2.38,
+    "NOx": 50.33,
+    "SOx": 22.14,
+    "air quality index": 78
+  },
+  {
+    "date": "2024-06-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 11.78,
+    "Black Carbon Concentration": 0.96,
+    "NOx": 31.84,
+    "SOx": 11.52,
+    "air quality index": 29
+  },
+  {
+    "date": "2024-06-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 13.06,
+    "Black Carbon Concentration": 0.5,
+    "NOx": 38.29,
+    "SOx": 6.51,
+    "air quality index": 23
+  },
+  {
+    "date": "2024-06-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 12.56,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 50.52,
+    "SOx": 10.09,
+    "air quality index": 23
+  },
+  {
+    "date": "2024-06-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 22.09,
+    "Black Carbon Concentration": 2.36,
+    "NOx": 60.11,
+    "SOx": 23.18,
+    "air quality index": 71
+  },
+  {
+    "date": "2024-07-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 11.74,
+    "Black Carbon Concentration": 0.81,
+    "NOx": 25.18,
+    "SOx": 10.41,
+    "air quality index": 28
+  },
+  {
+    "date": "2024-07-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 12.58,
+    "Black Carbon Concentration": 0.3,
+    "NOx": 37.15,
+    "SOx": 8.92,
+    "air quality index": 20
+  },
+  {
+    "date": "2024-07-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 18.81,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 45.42,
+    "SOx": 13.4,
+    "air quality index": 33
+  },
+  {
+    "date": "2024-07-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 21.09,
+    "Black Carbon Concentration": 2.12,
+    "NOx": 55.45,
+    "SOx": 22.02,
+    "air quality index": 66
+  },
+  {
+    "date": "2024-08-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 9.93,
+    "Black Carbon Concentration": 0.96,
+    "NOx": 27.37,
+    "SOx": 7.23,
+    "air quality index": 26
+  },
+  {
+    "date": "2024-08-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 15.91,
+    "Black Carbon Concentration": 0.94,
+    "NOx": 34.86,
+    "SOx": 12.18,
+    "air quality index": 35
+  },
+  {
+    "date": "2024-08-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 13.98,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 43.51,
+    "SOx": 8.56,
+    "air quality index": 21
+  },
+  {
+    "date": "2024-08-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 20.13,
+    "Black Carbon Concentration": 2.04,
+    "NOx": 49.88,
+    "SOx": 19.93,
+    "air quality index": 60
+  },
+  {
+    "date": "2024-09-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 11.52,
+    "Black Carbon Concentration": 0.82,
+    "NOx": 28.27,
+    "SOx": 11.51,
+    "air quality index": 25
+  },
+  {
+    "date": "2024-09-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 15.03,
+    "Black Carbon Concentration": 0.33,
+    "NOx": 39.32,
+    "SOx": 12.53,
+    "air quality index": 25
+  },
+  {
+    "date": "2024-09-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 11.79,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 43.14,
+    "SOx": 11.27,
+    "air quality index": 20
+  },
+  {
+    "date": "2024-09-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 17.51,
+    "Black Carbon Concentration": 1.74,
+    "NOx": 42.2,
+    "SOx": 19.14,
+    "air quality index": 57
+  },
+  {
+    "date": "2024-10-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.52,
+    "Black Carbon Concentration": 0.82,
+    "NOx": 31.92,
+    "SOx": 6.68,
+    "air quality index": 24
+  },
+  {
+    "date": "2024-10-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 13.86,
+    "Black Carbon Concentration": 0.25,
+    "NOx": 37.04,
+    "SOx": 11.09,
+    "air quality index": 23
+  },
+  {
+    "date": "2024-10-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 13.26,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 48.0,
+    "SOx": 8.83,
+    "air quality index": 23
+  },
+  {
+    "date": "2024-10-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 20.71,
+    "Black Carbon Concentration": 1.88,
+    "NOx": 48.67,
+    "SOx": 21.92,
+    "air quality index": 61
+  },
+  {
+    "date": "2024-11-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 7.06,
+    "Black Carbon Concentration": 0.84,
+    "NOx": 31.73,
+    "SOx": 9.59,
+    "air quality index": 21
+  },
+  {
+    "date": "2024-11-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 14.71,
+    "Black Carbon Concentration": 0.34,
+    "NOx": 39.22,
+    "SOx": 10.65,
+    "air quality index": 23
+  },
+  {
+    "date": "2024-11-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 17.16,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 45.84,
+    "SOx": 9.0,
+    "air quality index": 28
+  },
+  {
+    "date": "2024-11-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 17.02,
+    "Black Carbon Concentration": 1.91,
+    "NOx": 46.18,
+    "SOx": 17.16,
+    "air quality index": 57
+  },
+  {
+    "date": "2024-12-01",
+    "phase": "operation",
+    "location": "facility",
+    "PM 2.5 Concentration": 12.58,
+    "Black Carbon Concentration": 1.42,
+    "NOx": 32.61,
+    "SOx": 9.35,
+    "air quality index": 38
+  },
+  {
+    "date": "2024-12-01",
+    "phase": "operation",
+    "location": "little manila",
+    "PM 2.5 Concentration": 16.34,
+    "Black Carbon Concentration": 0.35,
+    "NOx": 32.82,
+    "SOx": 8.92,
+    "air quality index": 24
+  },
+  {
+    "date": "2024-12-01",
+    "phase": "operation",
+    "location": "tracy",
+    "PM 2.5 Concentration": 10.93,
+    "Black Carbon Concentration": 0.1,
+    "NOx": 44.73,
+    "SOx": 13.03,
+    "air quality index": 20
+  },
+  {
+    "date": "2024-12-01",
+    "phase": "operation",
+    "location": "modesto",
+    "PM 2.5 Concentration": 18.65,
+    "Black Carbon Concentration": 1.96,
+    "NOx": 47.49,
+    "SOx": 13.58,
+    "air quality index": 57
+  }
+]

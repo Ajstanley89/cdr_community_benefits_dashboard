@@ -1,23 +1,24 @@
-// Following the exmaple here: https://leafletjs.com/examples/quick-start/
-const view_center = [37.961632, -121.275604];
-const emissionsMap = L.map('emissionsMap').setView(view_center, 13);
+// // Following the exmaple here: https://leafletjs.com/examples/quick-start/
+// const view_center = [37.961632, -121.275604];
+// const emissionsMap = L.map('emissionsMap').setView(view_center, 13);
+// // emissionsMap.invalidateSize()
 
-// add tile layer
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 15,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(emissionsMap);
+// // add tile layer
+// L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     maxZoom: 15,
+//     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+// }).addTo(emissionsMap);
 
-const marker = L.marker(view_center).addTo(emissionsMap);
+// const marker = L.marker(view_center).addTo(emissionsMap);
 
-// display marker info on click
-marker.bindPopup("Proposed DACS facility").openPopup();
+// // display marker info on click
+// marker.bindPopup("Proposed DACS facility").openPopup();
 
 // Time series section
 // set the dimensions and margins of the graph
 var pollution_margin = {top: 10, right: 30, bottom: 30, left: 60},
-width = 300 - pollution_margin.left - pollution_margin.right,
-height = 150 - pollution_margin.top - pollution_margin.bottom;
+width = 600 - pollution_margin.left - pollution_margin.right,
+height = 300 - pollution_margin.top - pollution_margin.bottom;
 
 // append the svg object to the body of the page
 var svgPollution = d3.select("#timeSeriesPlot")
@@ -55,7 +56,6 @@ Promise.all([d3.json("assets/data/pollution.json"), d3.json("assets/data/polluti
         pollutant_types.add(d.properties.Pollutant)
         location_ids.add(d.properties.location_id)
     });
-
 
     // populate selection menu
     d3.select("#pollutantSelection")
@@ -101,18 +101,18 @@ Promise.all([d3.json("assets/data/pollution.json"), d3.json("assets/data/polluti
     const location_timeseries = reformat_timeseries(filtered_data, coordinates_data, location_ids, window_size)
     const heat_data = format_for_heat_layer(location_timeseries)
 
-    var heatLayer = L.heatLayer(heat_data, {radius: 10}).addTo(emissionsMap);
+    // var heatLayer = L.heatLayer(heat_data, {radius: 10}).addTo(emissionsMap);
 
-    heatLayer.on('mouseover', ev => {
-        console.log('You touched the heatmap!')
-        heat.openPopup();
-    })
+    // heatLayer.on('mouseover', ev => {
+    //     console.log('You touched the heatmap!')
+    //     heat.openPopup();
+    // })
 
-    build_pollution_time_series(svgPollution, location_timeseries, initial_pollutant_selection)
+    // build_pollution_time_series(svgPollution, location_timeseries, initial_pollutant_selection)
 
     const resource_selection = d3.select('#resourceSelection').property('value')
     console.log('asdklfjh', resource_data, resource_selection)
-    build_resource_time_series(svgResource, resource_data, resource_selection)
+    // build_resource_time_series(svgResource, resource_data, resource_selection)
 
 
     // event listener for dropdown
@@ -138,6 +138,7 @@ Promise.all([d3.json("assets/data/pollution.json"), d3.json("assets/data/polluti
     // event listener for slider
     d3.select("#mapSlider").on("input", function() {
         const window_size= this.value
+        console.log('Window Size: ', window_size)
         d3.select("#sliderValue").text(window_size + " Days")
 
         const pollutant = d3.select('#pollutantSelection').property('value')
@@ -212,7 +213,6 @@ function reformat_timeseries(data, coordinates_data, location_ids, window_size) 
 }
 
 function format_for_heat_layer(data) {
-
     let formatted_data = data.map(function(d) {
        return [d.geometry.coordinates[1], d.geometry.coordinates[0], d.moving_average[0]] // only show the latest moving average on the map
     })
@@ -233,6 +233,22 @@ function format_for_heat_layer(data) {
 }
 
 function build_heat_layer(data, old_heat_layer) {
+    // Following the exmaple here: https://leafletjs.com/examples/quick-start/
+    const view_center = [37.961632, -121.275604];
+    const emissionsMap = L.map('emissionsMap').setView(view_center, 13);
+    // emissionsMap.invalidateSize()
+
+    // add tile layer
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 15,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(emissionsMap);
+
+    const marker = L.marker(view_center).addTo(emissionsMap);
+
+    // display marker info on click
+    marker.bindPopup("Proposed DACS facility").openPopup();
+    emissionsMap.invalidateSize()
     // leaflet needs data in [[lat, lon, intensity],...]
     emissionsMap.removeLayer(old_heat_layer)
     let formatted_data = format_for_heat_layer(data)

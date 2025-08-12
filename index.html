@@ -10,35 +10,53 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- leaflet -->
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-	  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""/>
+	  	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     		crossorigin=""></script>
+		<script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 
 		<!-- d3 -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.js"></script>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
-        <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+        crossorigin=""></script> -->
+
 	</head>
 	<body class="is-preload">
+		<div class="navbar">
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#siteLocation">Facility Map</a></li>
+					<li><a href="#projectInformation">Project Information</a></li>
+					<li><a href="#engagementPhilosophy">Engagement Philosophy</a></li>
+					<li><a href="#jobs">Jobs</a></li>
+					<li><a href="#jobs">Environment</a></li>
+					<li><a href="#seismic">Seismic</a></li>
+					<li><a href="#contact">Contact</a></li>
+
+				</ul>
+			</nav>
+		</div>
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><strong>TBD Company Name</strong>, We remove carbon dioxide directly from the air to fight climate change. Using advanced technology, we’re working to clean up the atmosphere and build a better future.
+					<h1><strong>Placeholder: Community First DAC </strong>, We remove carbon dioxide directly from the air to fight climate change. Using advanced technology, we’re working to clean up the atmosphere and build a better future.
 				</div>
 			</header>
 
 		<!-- Main -->
 		<div id="main">
 				<!-- One -->
-					<section id="one" height="100%">
+					<section id="siteLocation" height="100%">
 						<header class="major">
 							<h2>Site Location Map</h2>
 						</header>
@@ -52,46 +70,61 @@
 							We have opted into Ava Community Energy’s Renewable 100 program, which sources 100% of its electricity from California wind and solar. By aligning our power needs with fully renewable sources, we ensure that our Direct Air Capture systems are driven by clean energy—maximizing climate benefit and minimizing upstream emissions
 						</p>
 
-						<p>If there is not sufficient solar or wind energy, we have outfitted a nearby gas power plant with carbon capture and storage to power our facility.</p>
+						<p>While we prioritize using low carbon energy sources like wind and solar to power our facility, these resources alone aren't enough to meet our energy needs. Because of this, we have outfitted a nearby gas power plant with carbon capture and storage technology to ensure that this facility is fully powered by decarbonized sources.</p>
 						
 						<p>Explore the map to learn more about the location and energy sources for our proposed facility.</p>
 						<div class="row">
 							<div class="col-12" height="100 %">
 								<div id="map"></div>
-								<script src="assets/js/overview_map.js"></script>
 							</div>
 						</div>
 					</section>
-					
+
+				<!-- community engagement -->
+				<section id="engagementPhilosophy" height="100%">
+						<header class="major">
+							<h2>Community Engagement Philosophy</h2>
+						</header>
+						<p>As we seek to restore the environment, we also seek to build community. Scaling up a technology this new requires community trust, and this project would not have been possible without the direct partnership of the people of Stockton</p>
+
+						<p>Every piece of this project was made through building consensus with the community. Our process involved: </p>
+						<ul>
+							<li>Holding Recurring Town Hall meetings early and often</li>
+							<li>Meeting directly with community leaders to build consensus on what to monitor</li>
+							<li>Commitment to first consider candidates from Stockton when hiring</li>
+						</ul>
+
+						<p>We chose the San Joaquin Valley first and foremost for its people and exemplary workfornce. It is a priveledge to serve your community.</p>
+					</section>
 
 				<!-- Two -->
-					<section id="two">
+					<section id="projectInformation">
 						<h2>Project Information</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/Locations.jpg" alt="" /></a>
-								<h3>Locations</h3>
+								<h3>Location</h3>
 								<p>We chose Stockton CA for our pilot facility for the great people, the great food, and despite their ethusiasm for a certain yellow fruit! More locations to be announced soon!</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/Environmental Impacts.jpg" alt="" /></a>
+								<a href="Facility Monitoring/" class="image fit thumb"><img src="images/Environmental Impacts.jpg" alt="" /></a>
 								<h3>Environmental Impacts</h3>
 								<p>Our project aims to protect the environment while capturing and storing CO2. We only use about 792,000 gallons of water a day and regularly track PM2.5 emissions through Purple Air Monitors. Click below to learn more about this.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/men_working.jpg" alt="" /></a>
+								<a href="Jobs/" class="image fit thumb"><img src="images/men_working.jpg" alt="" /></a>
 								<h3>Job Impacts</h3>
 								<p>The construction of this facility will create 765 jobs. When the facility is operational, it will create 220 long-term jobs for Stockton. We believe that upfront investment in quality labor will benefit both our project and the community, so we prioritize hiring union jobs. </p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/Permitting Timeline.jpg" alt="" /></a>
+								<a href="Timeline/" class="image fit thumb"><img src="images/Permitting Timeline.jpg" alt="" /></a>
 								<h3>Permitting Timeline</h3>
 								<p>The Facility was completed in 2024 and is now operational!</p>
 							</article>
 					</section>
 
 					<!-- community workforce commitment -->
-					<section id="two">
+					<section id="jobs">
 						<h2>Community Workforce Commitment</h2>
 						<div class="row">
 							<div class="col-6 col-12-xsmall work-item">
@@ -105,9 +138,7 @@
 								</p>
 								<br>
 								<!-- Triggers -->
-								<button class="button primary js-modal-open" data-modal-target="#jobs">
-								Jobs Data
-								</button>
+								<a href="Jobs/" class="button">Jobs Data</a>
 
 							</div>
 							<div class="col-6 col-12-xsmall work-item">
@@ -115,7 +146,7 @@
 								<img src="images/jobs_pie.png", width="90%", height="90%">
 							</div>
 						</div>
-						<div id="jobs" class="modal">
+						<!-- <div id="jobs" class="modal">
 							<div class="modal-content poptrox-popup">
 								<span class="closer" data-modal-close></span>
 								<h2>Jobs Data</h2>
@@ -129,15 +160,15 @@
 								<li><button class="button primary" data-modal-close>Close</button></li>
 								</ul>
 							</div>
-						</div>
+						</div> -->
 					</section>
 
 					<!-- Environmental Risk -->
-					<section id="two">
-						<h2>Environmental Risk</h2>
+					<section id="environment">
+						<h2>Environmental Accountability</h2>
 						<div class="row">
 							<div class="col-6 col-12-xsmall work-item">
-								<h3>Philanthropy in Action: Donating Air Quality Monitors</h3>
+								<h3>Air Quality Monitors</h3>
 								<p>
 									As part of our commitment to advancing climate solutions, [Company Name] donates air quality monitors to communities near our project sites. These monitors provide valuable environmental data that supports both our Direct Air Capture operations and broader efforts to improve local air quality.
 									<br><br>
@@ -146,67 +177,20 @@
 								</p>
 								<br>
 								<!-- Triggers -->
-								<button class="button primary js-modal-open" data-modal-target="#environmentaldashboard">
-								Environmental Data
-								</button>
-
+								<a href="Facility Monitoring/" class="button">Facility Monitoring</a>
 							</div>
 							<div class="col-6 col-12-xsmall work-item">
 								<h3 style="text-align:center;">Air Quality Around the Faclity</h3>
 								<img src="images/gauge-chart-example.svg", width="100%", height="100%">
+								<!-- SJV air embendding through iframes does not work with firefox. It gets blocked automatically. Sad. -->
+								 <!-- <iframe src="https://www.sjvair.com/widget/#/iYWFFE54R_uCzciaFkPZcw" frameborder="0" allowtransparency="true" style="overflow: hidden; width: 100%; height: 100%;"></iframe> -->
 								<h3 style="text-align:center;">Low Risk</h3>
 							</div>
 						</div>
-
-					<!-- Environemntal Risk Modal -->
-					<div id="environmentaldashboard" class="modal">
-					<div class="modal-content poptrox-popup">
-						<span class="closer" data-modal-close></span>
-						<!-- dropdown menus -->
-						<div class="row" height = 50%>
-							<div class="col-md-6 mb-5">
-								<!--drop down for pollutant selection-->
-								<div class="select-wrap">
-									<label for="pollutantSelection">Select a Pollutant</label>
-									<select name="pollutantSelection" id="pollutantSelection"></select>
-								</div>
-
-								<!--drop down for resource selection-->
-								<div class="select-wrap">
-									<label for="resourceSelection">Select Resource</label>
-									<select name="resourceSelection" id="resourceSelection"></select>
-								</div>
-
-								<!--Slider-->
-								<label for="mapSlider">Moving Average Window</label>
-								<input type="range" name="mapSlider" id="mapSlider" min="1" max="30" step="1" value="15">
-								<span id="sliderValue">15 Days</span>
-							</div>
-						</div>
-						<div class="row" height="100%">
-							<div class="col-6 col-12-xsmall">
-								<!--Leaflet emissions map-->
-								<!-- TO DO: update emissions map with new facility location -->
-								<div id="emissionsMap"></div>
-							<!--Right Side Graphs-->
-							<div class="col-6 col-12-xsmall">
-								<!--Timeseries For Air Quality-->
-								<div id="timeSeriesPlot"></div>
-								<!-- resource cosumption by month -->
-								<div id="resourceConsumptionPlot"></div>
-                    			<!-- <script src="js/pollution_map.js"></script> -->
-                			</div>
-            				</div>
-						</div>
-						<ul class="actions">
-						<li><button class="button primary" data-modal-close>Close</button></li>
-						</ul>
-					</div>
-					</div>
 					</section>
 
 					<!-- Seismic Risk -->
-					<section id="three">
+					<section id="seismic">
 						<h2>Earthquake Risk</h2>
 						<div class="row">
 							<div class="col-6 col-12-xsmall work-item">
@@ -216,390 +200,51 @@
 									<br>
 								</p>
 							<br>
-							<button class="button secondary js-modal-open" data-modal-target="#seismicdashboard">
-							Seismic Data
-							</button>
 							</div>
 							<div class="col-6 col-12-xsmall work-item">
 								<h3 style="text-align:center;">Seismic Risk from Injection</h3>
 								<img src="images/gauge-chart-example.svg", width="100%", height="100%">
 								<h3 style="text-align:center;">Low Risk within 100 Days</h3>
-
 							</div>
 					</section>
-
-					<!-- Seismic Modal -->
-					<div id="seismicdashboard" class="modal">
-					<div class="modal-content poptrox-popup">
-						<span class="closer" data-modal-close></span>
-						<h2>Seismic Risk</h2>
-						Things to add:
-						<ul>
-							<li>Well pressure monitoring?</li>
-							<li>Map of fault activity like ORION?</li>
-						</ul>
-						<ul class="actions">
-						<li><button class="button primary" data-modal-close>Close</button></li>
-						</ul>
-					</div>
-					</div>
-
-				<!-- Contact Us -->
-					<section id="three">
+					<!-- contact -->
+					<section id="contact">
 						<h2>Get In Touch</h2>
-						<p>At CO₂ Ass-Kickers Inc., we believe that meaningful climate action starts with strong community connections. Whether you're a local stakeholder, a potential partner, or simply interested in learning more, we welcome your questions and ideas. Reach out to explore how we can collaborate and create lasting impact together.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										<b>3221 W Hammer Ln,</b>
-										<b>Stockton, CA 95209</b>
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@co2asskickersinc</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
-
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
+							<p>At Community First DAC, we believe that meaningful climate action starts with strong community connections. Whether you're a local stakeholder, a potential partner, or simply interested in learning more, we welcome your questions and ideas. Reach out to explore how we can collaborate and create lasting impact together.</p>
 							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
+								<div class="col-8 col-12-small">
+									<form method="post" action="#">
+										<div class="row gtr-uniform gtr-50">
+											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										</div>
+									</form>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
 									</ul>
 								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
+								<div class="col-4 col-12-small">
+									<ul class="labeled-icons">
+										<li>
+											<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+											<b>3221 W Hammer Ln,</b>
+											<b>Stockton, CA 95209</b>
+										</li>
+										<li>
+											<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+											000-000-0000
+										</li>
+										<li>
+											<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+											<a href="#">hello@co2asskickersinc</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</section>
+					</div>
 
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-				-->
-
-			</div>
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -623,7 +268,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/pollution_map.js"></script>
-		<script src="assets/js/resource_consumption.js"></script>
+		<script src="assets/js/overview_map.js"></script>
+		<!-- <script src="assets/js/pollution_map.js"></script> -->
+		<!-- <script src="assets/js/resource_consumption.js"></script> -->
 	</body>
 </html>

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Stockton Community DACS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+
+		<!-- leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""/>
+	  	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     		crossorigin=""></script>
+		<script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+		<!-- d3 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.js"></script>
+        <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script> -->
+
+	</head>
+	<body class="is-preload">
+		<div class="navbar">
+			<nav>
+				<ul>
+					<li><a href="../">Home</a></li>
+					<li><a href="#siteMap">Facility Map</a></li>
+					<li><a href="#beforeAfter">Construction Impacts</a></li>
+					<li><a href="#facilityMonitoring">Facility Monitoring</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Community First DAC </strong>, We remove carbon dioxide directly from the air to fight climate change. Using advanced technology, we’re working to clean up the atmosphere and build a better future.
+				</div>
+			</header>
+
+		<!-- Main -->
+		<div id="main">
+				<!-- One -->
+					<section id="siteMap" height="100%">
+						<header class="major">
+							<h2>Site Location and Air Quality Map</h2>
+						</header>
+						<p>When operational, our direct Air capture facility will not pollute the environment. We also committed to reduce pollution from constructing the facility as much as possible. 
+							We have installed air monitors in these communities to ensure we do not cause additional pollution butden to the people of San Joaquin Valley.
+
+							For in-depth air quality monitoring in SJV, check out <a href="https://www.sjvair.com/app/">SJVAir</a>.
+						</p>
+						
+						<div class="row">
+							<div class="col-12" height="100%">
+								<div id="map" width="100%", height="500px"></div>
+							</div>
+						</div>
+					</section>
+					
+
+				<!-- Before and After facility Construction -->
+					<section id="beforeAfter">
+						<h2>Before and After Facility Construction</h2>
+						<p>We want to transparently communicate the impacts of building our facility and ensure that building this facility does not worsen the air quality in San Joaguin Valley.</p>
+
+						<p>Through continuing engagement sessions and through partnering with community leaders, we built consensus on where to place air monitors and how to establish a baseline for pre-construction pollution levels.
+							We have established a network of air quality monitors both at the facility and at key locations in the community. We have also taken baseline monthly measurements in all these locations a year before facility construction began.
+							This ensures that we can detect any shift in air quality that could be caused by building the facility.
+						</p>
+						<p>Explore the air quality impacts of building our facility over time below:</p>
+						<div id="controlChartButtons"></div>
+						<div class="row">
+							<div class="col-12">
+								<h4>Facility</h4>
+								<div id="facilityBeforeAfter"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h4>Little Manila</h4>
+								<div id="littleManilaBeforeAfter"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h4>Tracy</h4>
+								<div id="TracyBeforeAfter"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h4>Modesto</h4>
+								<div id="ModestoBeforeAfter"></div>
+							</div>
+						</div>
+					</section>
+
+					<!-- facility Monitoring -->
+					<section id="facilityMonitoring">
+						<H2>Facility Monitoring</H2>
+						<p>Removing CO<sub>2</sub> directly from the atmosphere can use lots of water and energy, so we will be transparent aabout how much resources our facility uses each month. 
+						</p>
+						<p>We have optimized our process to maximize the use of recycled water, and we have prioritized using solar and wind to power the facility. Since there will be times when solar and wind energy are not available, we have also outfitted a nearby gas power plant with carbon capture and storage, ensuring all the energy to power our facility is decarbonized.</p>
+						
+						<p>Explore Our Facility's energy Use below:</p>
+						<div class="row">
+							<div class="col-12">
+								<div id="facilityChartButtons"></div>
+								<div id="facilityChart"></div>
+							</div>
+						</div>
+						
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; CO2 Ass Kickers</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.poptrox.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+		<!-- <script src="../assets/js/overview_map.js"></script> -->
+		<script src="../assets/js/sjv_dashboard.js"></script>
+		<!-- <script src="assets/js/pollution_map.js"></script> -->
+		<!-- <script src="assets/js/resource_consumption.js"></script> -->
+	</body>
+</html>
