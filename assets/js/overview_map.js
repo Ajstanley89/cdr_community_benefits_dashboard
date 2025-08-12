@@ -42,16 +42,17 @@ var LeafIcon = L.Icon.extend({
     }
 });
 
-var facilityIcon = new LeafIcon({iconUrl: '../assets/icons/facilityIcon.png'}),
-    gasIcon = new LeafIcon({iconUrl: '../assets/icons/gasIcon.png'}),
-    windIcon = new LeafIcon({iconUrl: '../assets/icons/windIcon.png'});
+var facilityIcon = new LeafIcon({iconUrl: 'assets/icons/facilityIcon.png'}),
+    gasIcon = new LeafIcon({iconUrl: 'assets/icons/gasIcon.png'}),
+    windIcon = new LeafIcon({iconUrl: 'assets/icons/windIcon.png'})
+    solarIcon = new LeafIcon({iconUrl: 'assets/icons/solarIcon.png'});
 
 // Show markers
 addMarkers(facilityData, facilityIcon);
 addMarkers(gasData, gasIcon);
 
 // need to make new solar marker
-solarFarms.forEach(d => addMarkers(d, windIcon));
+solarFarms.forEach(d => addMarkers(d, solarIcon));
 
 L.marker(injectionData.coords).addTo(map).bindPopup(injectionData.hoverText);
 
